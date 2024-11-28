@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp8sujkfsk6q"]
+
+[ext_resource type="Script" path="res://Scripts/interaction.gd" id="1_st50t"]
+[ext_resource type="FontFile" uid="uid://8q3wd1f811wn" path="res://Assets/Sprites/UI/Ui/Font/NormalFont.ttf" id="2_jmxpv"]
+[ext_resource type="Texture2D" uid="uid://b17jmrj7wxq56" path="res://Assets/Sprites/UI/Ui/Dialog/ChoiceBox.png" id="3_yv7pn"]
+
+[node name="Interaction" type="CanvasLayer"]
+script = ExtResource("1_st50t")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -71.0
+offset_top = -17.0
+offset_right = 71.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("2_jmxpv")
+theme_override_font_sizes/font_size = 25
+text = "TALK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Label"]
+z_index = -1
+position = Vector2(71, 20)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_yv7pn")

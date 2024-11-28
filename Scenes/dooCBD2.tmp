@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkj8vnq5vme3i"]
+
+[sub_resource type="GDScript" id="GDScript_ot8er"]
+script/source = "
+		
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdjgu"]
+size = Vector2(125, 24)
+
+[node name="Door" type="Area2D" groups=["door"]]
+position = Vector2(480, 0)
+script = SubResource("GDScript_ot8er")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -12)
+shape = SubResource("RectangleShape2D_fdjgu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

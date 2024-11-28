@@ -1,0 +1,8 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://ivyegv5konhs"]
+
+[ext_resource type="Texture2D" uid="uid://cyeqys6lii05j" path="res://Assets/Sprites/UI/UI.png" id="1_3hx8s"]
+
+[resource]
+texture = ExtResource("1_3hx8s")
+texture_margin_right = 2.0
+region_rect = Rect2(307, 118, 58, 4)

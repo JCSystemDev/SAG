@@ -1,0 +1,917 @@
+[
+	{
+		"question_code": "C001",
+		"question_type": "Code",
+		"question": "¿Cuál de estos lenguajes de programación es de tipado fuerte?",
+		"options": ["Python", "Javascript", "R", "Java"],
+		"answer": "Java"
+	},
+	{
+		"question_code": "C002",
+		"question_type": "Code",
+		"question": "¿Qué paradigma de programación utiliza Java?",
+		"options": ["Funcional", "Imperativo", "Orientado a Objetos", "Declarativo"],
+		"answer": "Orientado a Objetos"
+	},
+	{
+		"question_code": "C003",
+		"question_type": "Code",
+		"question": "¿Cuál de estos lenguajes se utiliza principalmente para ciencia de datos?",
+		"options": ["C++", "Javascript", "R", "Assembly"],
+		"answer": "R"
+	},
+	{
+		"question_code": "C004",
+		"question_type": "Code",
+		"question": "¿Qué característica define a un lenguaje orientado a objetos?",
+		"options": ["Herencia", "Compilación", "Recursión", "Funcionalidad"],
+		"answer": "Herencia"
+	},
+	{
+		"question_code": "C005",
+		"question_type": "Code",
+		"question": "¿Cuál de estos lenguajes es de bajo nivel?",
+		"options": ["Python", "C", "JavaScript", "Java"],
+		"answer": "C"
+	},
+	{
+		"question_code": "C006",
+		"question_type": "Code",
+		"question": "¿Cuál de los siguientes no es un lenguaje de programación?",
+		"options": ["Python", "HTML", "Java", "C++"],
+		"answer": "HTML"
+	},
+	{
+		"question_code": "C007",
+		"question_type": "Code",
+		"question": "¿Qué lenguaje es conocido por su uso en análisis estadístico y ciencia de datos?",
+		"options": ["Java", "Python", "R", "Assembly"],
+		"answer": "R"
+	},
+	{
+		"question_code": "C008",
+		"question_type": "Code",
+		"question": "¿Qué tipo de bucle se utiliza para iterar hasta que se cumpla una condición?",
+		"options": ["for", "while", "do-while", "repeat-until"],
+		"answer": "While"
+	},
+	{
+		"question_code": "C009",
+		"question_type": "Code",
+		"question": "¿Cuál es la función principal de un compilador?",
+		"options": ["Ejecutar código", "Convertir código fuente a código máquina", "Depurar errores", "Monitorear rendimiento"],
+		"answer": "Convertir código fuente a código máquina"
+	},
+	{
+		"question_code": "C010",
+		"question_type": "Code",
+		"question": "¿Qué operador lógico representa la conjunción lógica?",
+		"options": ["&&", "||", "!", "=="],
+		"answer": "&&"
+	},
+	{
+		"question_code": "C011",
+		"question_type": "Code",
+		"question": "¿Qué lenguaje de programación es conocido por usarse en inteligencia artificial?",
+		"options": ["C++", "Python", "Ruby", "Go"],
+		"answer": "Python"
+	},
+	{
+		"question_code": "C012",
+		"question_type": "Code",
+		"question": "¿Qué operador lógico se utiliza para la negación lógica?",
+		"options": ["&&", "||", "!", "=="],
+		"answer": "!"
+	},
+	{
+		"question_code": "C013",
+		"question_type": "Code",
+		"question": "¿Qué operador lógico evalúa si dos condiciones son verdaderas al mismo tiempo?",
+		"options": ["&&", "||", "!", "<>"],
+		"answer": "&&"
+	},
+	{
+		"question_code": "C014",
+		"question_type": "Code",
+		"question": "¿Qué método se utiliza para seleccionar un elemento HTML por su ID en JavaScript?",
+		"options": ["getElementById", "querySelector", "getElementsByClassName", "getElementByTagName"],
+		"answer": "getElementById"
+	},
+	{
+		"question_code": "C015",
+		"question_type": "Code",
+		"question": "¿Cómo se define una función de flecha en JavaScript?",
+		"options": ["function => () {}", "() => {}", "function() {}", "() -> {}"],
+		"answer": "() => {}"
+	},
+	{
+		"question_code": "C016",
+		"question_type": "Code",
+		"question": "¿Qué estructura se utiliza para manejar excepciones en Python?",
+		"options": ["try-except", "if-else", "switch-case", "try-catch"],
+		"answer": "try-except"
+	},
+	{
+		"question_code": "C017",
+		"question_type": "Code",
+		"question": "¿Qué tipo de datos utiliza las llaves `{}` y contiene pares clave-valor?",
+		"options": ["Lista", "Diccionario", "Conjunto", "Tupla"],
+		"answer": "Diccionario"
+	},
+	{
+		"question_code": "C018",
+		"question_type": "Code",
+		"question": "¿Qué principio de la programación orientada a objetos permite reutilizar el código al heredar características de una clase base?",
+		"options": ["Polimorfismo", "Encapsulación", "Herencia", "Abstracción"],
+		"answer": "Herencia"
+	},
+	{
+		"question_code": "C019",
+		"question_type": "Code",
+		"question": "¿Qué principio de la programación orientada a objetos implica ocultar los detalles internos de un objeto?",
+		"options": ["Abstracción", "Polimorfismo", "Herencia", "Encapsulación"],
+		"answer": "Encapsulación"
+	},
+	{
+		"question_code": "C020",
+		"question_type": "Code",
+		"question": "¿Cómo se llama el método especial que se utiliza para inicializar un objeto en Python?",
+		"options": ["__new__", "__init__", "__start__", "__create__"],
+		"answer": "__init__"
+	},
+	{
+		"question_code": "C021",
+		"question_type": "Code",
+		"question": "¿Qué comando de Django se utiliza para crear una nueva aplicación dentro de un proyecto?",
+		"options": ["django-admin startapp", "django-admin createapp", "python manage.py startapp", "python manage.py newapp"],
+		"answer": "python manage.py startapp"
+  	},
+  	{
+		"question_code": "C022",
+		"question_type": "Code",
+		"question": "¿Cómo se crea una vista basada en clase en Django?",
+		"options": ["Con `def`", "Con `class` heredando de `View`", "Con `view`", "Con `url`"],
+		"answer": "Con `class` heredando de `View`"
+	},
+  	{
+		"question_code": "C023",
+		"question_type": "Code",
+		"question": "¿Cuál de las siguientes palabras clave se utiliza para declarar una variable inmutable en Kotlin?",
+		"options": ["val", "var", "const", "immutable"],
+		"answer": "val"
+	},
+	{
+		"question_code": "C024",
+		"question_type": "Code",
+		"question": "¿Cómo se crea una migración en Django para reflejar cambios en un modelo de base de datos?",
+		"options": ["django-admin migrate", "python manage.py migrate", "python manage.py makemigrations", "django-admin makemigrations"],
+		"answer": "python manage.py makemigrations"
+	},
+	{
+		"question_code": "C025",
+		"question_type": "Code",
+		"question": "¿Qué función se utiliza en Kotlin para comprobar si un valor es nulo o no?",
+		"options": ["isNull()", "isNullOrEmpty()", "nullCheck()", "!!"],
+		"answer": "!!"
+	},
+	{
+		"question_code": "H001",
+		"question_type": "HW",
+		"question": "¿Qué procesador es ARM?",
+		"options": [
+			"Intel i7",
+			"Ryzen 5",
+			"Phenom X2",
+			"Snapdragon"
+		],
+		"answer": "Snapdragon"
+	},
+	{
+		"question_code": "H002",
+		"question_type": "HW",
+		"question": "¿Qué determina la velocidad del procesador?",
+		"options": [
+			"Núcleos",
+			"Reloj",
+			"Caché",
+			"Voltaje"
+		],
+		"answer": "Reloj"
+	},
+	{
+		"question_code": "H003",
+		"question_type": "HW",
+		"question": "¿Arquitectura popular en móviles?",
+		"options": [
+			"x86",
+			"PowerPC",
+			"ARM",
+			"Itanium"
+		],
+		"answer": "ARM"
+	},
+	{
+		"question_code": "H004",
+		"question_type": "HW",
+		"question": "¿Qué tiene un SoC?",
+		"options": [
+			"Servidor",
+			"Smartphone",
+			"PC",
+			"Router"
+		],
+		"answer": "Smartphone"
+	},
+	{
+		"question_code": "H005",
+		"question_type": "HW",
+		"question": "¿Qué almacena datos temporalmente?",
+		"options": [
+			"RAM",
+			"HDD",
+			"GPU",
+			"PSU"
+		],
+		"answer": "RAM"
+	},
+	{
+		"question_code": "H006",
+		"question_type": "HW",
+		"question": "¿Diferencia entre RAM y caché?",
+		"options": [
+			"RAM más rápida",
+			"Caché más rápida",
+			"Caché más grande",
+			"Son iguales"
+		],
+		"answer": "Caché más rápida"
+	},
+	{
+		"question_code": "H007",
+		"question_type": "HW",
+		"question": "¿Ventaja de un SSD?",
+		"options": [
+			"Más rápido",
+			"Más capacidad",
+			"HDD más rápido",
+			"Solo moderno"
+		],
+		"answer": "Más rápido"
+	},
+	{
+		"question_code": "H008",
+		"question_type": "HW",
+		"question": "¿Diferencias RISC vs CISC?",
+		"options": [
+			"RISC simple",
+			"CISC paralelo",
+			"RISC móviles",
+			"Son iguales"
+		],
+		"answer": "RISC simple"
+	},
+	{
+		"question_code": "H009",
+		"question_type": "HW",
+		"question": "¿Qué pasa en una interrupción?",
+		"options": [
+			"CPU se detiene",
+			"Ejecuta rutina",
+			"RAM se reinicia",
+			"Hardware apaga"
+		],
+		"answer": "Ejecuta rutina"
+	},
+	{
+		"question_code": "H010",
+		"question_type": "HW",
+		"question": "¿Qué es un driver?",
+		"options": [
+			"Software hardware",
+			"Chip energía",
+			"Protocolo red",
+			"Señales"
+		],
+		"answer": "Software hardware"
+	},
+	{
+		"question_code": "H011",
+		"question_type": "HW",
+		"question": "¿Diferencia NIC y switch?",
+		"options": [
+			"NIC red",
+			"Switch MAC",
+			"NIC Wi-Fi",
+			"Son iguales"
+		],
+		"answer": "NIC red"
+	},
+	{
+		"question_code": "H012",
+		"question_type": "HW",
+		"question": "¿Cómo interactúa SO con CPU?",
+		"options": [
+			"Recursos",
+			"Instrucciones",
+			"Solo caché",
+			"No interactúa"
+		],
+		"answer": "Recursos"
+	},
+	{
+		"question_code": "H013",
+		"question_type": "HW",
+		"question": "¿Qué hacen los drivers?",
+		"options": [
+			"Detectan hardware",
+			"Solo externos",
+			"Controlan seguridad",
+			"No útiles"
+		],
+		"answer": "Detectan hardware"
+	},
+	{
+		"question_code": "H014",
+		"question_type": "HW",
+		"question": "¿Qué factores influyen en el enfriamiento?",
+		"options": [
+			"Calor y espacio",
+			"Solo CPU",
+			"Solo disipadores",
+			"Cables"
+		],
+		"answer": "Calor y espacio"
+	},
+	{
+		"question_code": "H015",
+		"question_type": "HW",
+		"question": "¿Cómo afecta el ancho del bus?",
+		"options": [
+			"Más datos",
+			"Solo lectura",
+			"Menos energía",
+			"No afecta"
+		],
+		"answer": "Más datos"
+	},
+	{
+		"question_code": "H016",
+		"question_type": "HW",
+		"question": "¿Qué es un chipset?",
+		"options": [
+			"Gestión",
+			"RAM rápida",
+			"Conexión inalámbrica",
+			"Memoria principal"
+		],
+		"answer": "Gestión"
+	},
+	{
+		"question_code": "H017",
+		"question_type": "HW",
+		"question": "¿Función de un disipador?",
+		"options": [
+			"Absorber calor",
+			"Potencia CPU",
+			"Almacenar calor",
+			"Reducir ruido"
+		],
+		"answer": "Absorber calor"
+	},
+	{
+		"question_code": "H018",
+		"question_type": "HW",
+		"question": "¿Qué ejecuta instrucciones?",
+		"options": [
+			"CPU",
+			"GPU",
+			"RAM",
+			"PSU"
+		],
+		"answer": "CPU"
+	},
+	{
+		"question_code": "H019",
+		"question_type": "HW",
+		"question": "¿Qué estándar conecta almacenamiento externo?",
+		"options": [
+			"USB 3.2",
+			"HDMI",
+			"PCIe",
+			"VGA"
+		],
+		"answer": "USB 3.2"
+	},
+	{
+		"question_code": "H020",
+		"question_type": "HW",
+		"question": "¿Cómo interactúa SO con hardware?",
+		"options": [
+			"Drivers",
+			"Directo",
+			"No interactúa",
+			"SO independiente"
+		],
+		"answer": "Drivers"
+	},
+	{
+		"question_code": "H021",
+		"question_type": "HW",
+		"question": "¿Qué mide la frecuencia de un procesador?",
+		"options": [
+			"Velocidad del reloj",
+			"Capacidad de RAM",
+			"Tamaño del bus",
+			"Modelo de CPU"
+		],
+		"answer": "Velocidad del reloj"
+	},
+	{
+		"question_code": "H022",
+		"question_type": "HW",
+		"question": "¿Qué tipo de memoria no es volátil?",
+		"options": [
+			"ROM",
+			"RAM",
+			"Caché",
+			"Disipador"
+		],
+		"answer": "ROM"
+	},
+	{
+		"question_code": "H023",
+		"question_type": "HW",
+		"question": "¿Qué tipo de conector utiliza un monitor moderno?",
+		"options": [
+			"HDMI",
+			"PS/2",
+			"VGA",
+			"RJ45"
+		],
+		"answer": "HDMI"
+	},
+	{
+		"question_code": "H024",
+		"question_type": "HW",
+		"question": "¿Qué es un RAID en informática?",
+		"options": [
+			"Agrupación de discos",
+			"Fuente de poder",
+			"Controlador de red",
+			"Driver de GPU"
+		],
+		"answer": "Agrupación de discos"
+	},
+	{
+		"question_code": "H025",
+		"question_type": "HW",
+		"question": "¿Qué determina el número de núcleos de un procesador?",
+		"options": [
+			"Cantidad de CPU físicas",
+			"Capacidad de la RAM",
+			"Velocidad de reloj",
+			"Voltaje de la PSU"
+		],
+		"answer": "Cantidad de CPU físicas"
+	},
+	{
+		"question_code": "S001",
+		"question_type": "CS",
+		"question": "¿Cuál de estos equipos se encarga de la defensa en ciberseguridad?",
+		"options": ["Blanco", "Amarillo", "Azul", "Rojo"],
+		"answer": "Azul"
+	},
+	{
+		"question_code": "S002",
+		"question_type": "CS",
+		"question": "¿Qué herramienta se usa para analizar vulnerabilidades en redes?",
+		"options": ["Wireshark", "Photoshop", "Excel", "AutoCAD"],
+		"answer": "Wireshark"
+	},
+	{
+		"question_code": "S003",
+		"question_type": "CS",
+		"question": "¿Qué término describe un ataque en el que se sobrecarga un servidor con solicitudes?",
+		"options": ["Phishing", "DoS", "MITM", "SQL Injection"],
+		"answer": "DoS"
+	},
+	{
+		"question_code": "S004",
+		"question_type": "CS",
+		"question": "¿Qué equipo realiza auditorías de seguridad para encontrar vulnerabilidades?",
+		"options": ["Equipo Azul", "Equipo Rojo", "Equipo Blanco", "Equipo Amarillo"],
+		"answer": "Equipo Rojo"
+	},
+	{
+		"question_code": "S005",
+		"question_type": "CS",
+		"question": "¿Qué representa un certificado SSL/TLS en un sitio web?",
+		"options": ["Seguridad de transporte", "Velocidad de carga", "Cantidad de tráfico", "Privacidad del contenido"],
+		"answer": "Seguridad de transporte"
+	},
+	{
+		"question_code": "S006",
+		"question_type": "CS",
+		"question": "¿Qué significa el término 'phishing' en ciberseguridad?",
+		"options": [
+		  "Acceso no autorizado a un sistema",
+		  "Robo de información a través de correos fraudulentos",
+		  "Desencriptación de datos cifrados",
+		  "Exploración de redes en busca de vulnerabilidades"
+		],
+		"answer": "Robo de información a través de correos fraudulentos"
+	},
+	{
+		"question_code": "S007",
+		"question_type": "CS",
+		"question": "¿Cuál es el propósito principal de un firewall?",
+		"options": [
+		  "Proteger la red al filtrar tráfico entrante y saliente",
+		  "Cifrar datos sensibles",
+		  "Detectar amenazas en dispositivos móviles",
+		  "Realizar auditorías de redes"
+		],
+		"answer": "Proteger la red al filtrar tráfico entrante y saliente"
+	},
+	{
+		"question_code": "S008",
+		"question_type": "CS",
+		"question": "¿Qué protocolo se usa comúnmente para transferir archivos de forma segura?",
+		"options": ["FTP", "SMTP", "SFTP", "HTTP"],
+		"answer": "SFTP"
+	},
+	{
+		"question_code": "S009",
+		"question_type": "CS",
+		"question": "¿Qué herramienta se utiliza para realizar análisis de malware?",
+		"options": ["Metasploit", "Wireshark", "IDA Pro", "Postman"],
+		"answer": "IDA Pro"
+	},
+	{
+		"question_code": "S010",
+		"question_type": "CS",
+		"question": "¿Qué es un ataque de fuerza bruta?",
+		"options": [
+		  "Un intento de adivinar contraseñas probando combinaciones múltiples",
+		  "Interceptar comunicaciones en una red",
+		  "Inyectar código malicioso en un sistema",
+		  "Bloquear un servidor mediante múltiples solicitudes"
+		],
+		"answer": "Un intento de adivinar contraseñas probando combinaciones múltiples"
+	},
+	{
+		"question_code": "S011",
+		"question_type": "CS",
+		"question": "¿Qué tipo de cifrado utiliza una clave pública y una clave privada?",
+		"options": ["Cifrado simétrico", "Cifrado asimétrico", "Hashing", "Codificación Base64"],
+		"answer": "Cifrado asimétrico"
+	},
+	{
+		"question_code": "S012",
+		"question_type": "CS",
+		"question": "¿Qué hace un ataque de tipo 'Man-in-the-Middle' (MITM)?",
+		"options": [
+		  "Intercepta comunicaciones entre dos partes",
+		  "Infecta un sistema con ransomware",
+		  "Bloquea el acceso a un sitio web",
+		  "Explora vulnerabilidades en bases de datos"
+		],
+		"answer": "Intercepta comunicaciones entre dos partes"
+	},
+	{
+		"question_code": "S013",
+		"question_type": "CS",
+		"question": "¿Qué puerto utiliza el protocolo HTTPS por defecto?",
+		"options": ["21", "80", "443", "22"],
+		"answer": "443"
+	},
+	{
+		"question_code": "S014",
+		"question_type": "CS",
+		"question": "¿Qué técnica utiliza un atacante para ocultar su identidad en Internet?",
+		"options": ["Ofuscación", "Proxy inverso", "VPN", "Túnel SSH"],
+		"answer": "VPN"
+	},
+	{
+		"question_code": "S015",
+		"question_type": "CS",
+		"question": "¿Qué componente verifica las identidades en una infraestructura de clave pública (PKI)?",
+		"options": ["Servidor web", "Certificado raíz", "Autoridad certificadora (CA)", "Proxy"],
+		"answer": "Autoridad certificadora (CA)"
+	},
+	{
+		"question_code": "S016",
+		"question_type": "CS",
+		"question": "¿Qué tipo de ataque aprovecha fallas en consultas SQL?",
+		"options": ["Cross-Site Scripting (XSS)", "SQL Injection", "Phishing", "Man-in-the-Middle (MITM)"],
+		"answer": "SQL Injection"
+	},
+	{
+		"question_code": "S017",
+		"question_type": "CS",
+		"question": "¿Qué significa la autenticación multifactor (MFA)?",
+		"options": [
+		  "Uso de múltiples contraseñas para un mismo sistema",
+		  "Autenticación con varios niveles de cifrado",
+		  "Uso de dos o más métodos de verificación para acceder a un sistema",
+		  "Validación basada únicamente en datos biométricos"
+		],
+		"answer": "Uso de dos o más métodos de verificación para acceder a un sistema"
+	},
+	{
+		"question_code": "S018",
+		"question_type": "CS",
+		"question": "¿Qué tipo de software puede detectar y eliminar malware?",
+		"options": ["Firewall", "Antivirus", "Analizador de redes", "Software de gestión de contraseñas"],
+		"answer": "Antivirus"
+	},
+	{
+		"question_code": "S019",
+		"question_type": "CS",
+		"question": "¿Cuál es la técnica principal de un ataque de Cross-Site Scripting (XSS)?",
+		"options": [
+		  "Inyectar código malicioso en una aplicación web",
+		  "Interceptar comunicaciones entre un cliente y un servidor",
+		  "Descargar datos sensibles sin permiso",
+		  "Sobrecargar un servidor con solicitudes"
+		],
+		"answer": "Inyectar código malicioso en una aplicación web"
+	},
+	{
+		"question_code": "S020",
+		"question_type": "CS",
+		"question": "¿Qué herramienta puede usarse para pruebas de penetración en sistemas web?",
+		"options": ["Wireshark", "Nmap", "Burp Suite", "VLC"],
+		"answer": "Burp Suite"
+	},
+	{
+		"question_code": "S021",
+		"question_type": "CS",
+		"question": "¿Qué hace un ataque de ransomware?",
+		"options": [
+		  "Cifra archivos del sistema y exige un rescate para desbloquearlos",
+		  "Infecta una red con virus autodestructivos",
+		  "Crea un canal de comunicación encubierto",
+		  "Roba credenciales de acceso mediante phishing"
+		],
+		"answer": "Cifra archivos del sistema y exige un rescate para desbloquearlos"
+	},
+	{
+		"question_code": "S022",
+		"question_type": "CS",
+		"question": "¿Qué protocolo es más seguro para acceder remotamente a un servidor?",
+		"options": ["Telnet", "FTP", "SSH", "SMTP"],
+		"answer": "SSH"
+	},
+	{
+		"question_code": "S023",
+		"question_type": "CS",
+		"question": "¿Qué se verifica en una prueba de penetración?",
+		"options": [
+		  "La cantidad de tráfico en un sitio web",
+		  "La resistencia de un sistema frente a ataques",
+		  "La calidad del código fuente",
+		  "La velocidad de carga de la aplicación"
+		],
+		"answer": "La resistencia de un sistema frente a ataques"
+	},
+	{
+		"question_code": "S024",
+		"question_type": "CS",
+		"question": "¿Qué tipo de amenaza representa un 'exploit'?",
+		"options": [
+		  "Un software que aprovecha vulnerabilidades para obtener acceso no autorizado",
+		  "Un virus diseñado para replicarse automáticamente",
+		  "Un ataque dirigido exclusivamente a redes inalámbricas",
+		  "Un método para proteger sistemas contra fallas"
+		],
+		"answer": "Un software que aprovecha vulnerabilidades para obtener acceso no autorizado"
+	},
+	{
+		"question_code": "S025",
+		"question_type": "CS",
+		"question": "¿Qué método de cifrado utiliza el protocolo WPA2 para redes Wi-Fi?",
+		"options": ["RSA", "AES", "DES", "SHA-256"],
+		"answer": "AES"
+	},
+	{
+		"question_code": "D001",
+		"question_type": "DB",
+		"question": "¿Cuál de estas palabras no corresponde al lenguaje SQL?",
+		"options": ["Select", "Update", "Find", "Set"],
+		"answer": "Find"
+	},
+	{
+		"question_code": "D002",
+		"question_type": "DB",
+		"question": "¿Qué comando en SQL se usa para insertar datos en una tabla?",
+		"options": ["INSERT", "ADD", "CREATE", "SET"],
+		"answer": "INSERT"
+	},
+	{
+		"question_code": "D003",
+		"question_type": "DB",
+		"question": "¿Qué tipo de base de datos es MongoDB?",
+		"options": ["Relacional", "Documental", "Columnar", "Llave-valor"],
+		"answer": "Documental"
+	},
+	{
+		"question_code": "D004",
+		"question_type": "DB",
+		"question": "¿Cuál de estas es una base de datos relacional?",
+		"options": ["MongoDB", "Redis", "MySQL", "Cassandra"],
+		"answer": "MySQL"
+	},
+	{
+		"question_code": "D005",
+		"question_type": "DB",
+		"question": "¿Qué comando en SQL se usa para modificar datos existentes?",
+		"options": ["MODIFY", "CHANGE", "UPDATE", "ALTER"],
+		"answer": "UPDATE"
+	},
+	{
+		"question_code": "D006",
+		"question_type": "DB",
+		"question": "En SQL, ¿qué comando se utiliza para eliminar una tabla de la base de datos?",
+		"options": ["DROP", "DELETE", "REMOVE", "TRUNCATE"],
+		"answer": "DROP"
+	},
+	{
+		"question_code": "D007",
+		"question_type": "DB",
+		"question": "En MongoDB, ¿cómo se denomina el identificador único de un documento dentro de una colección?",
+		"options": ["_id", "id", "UUID", "document_id"],
+		"answer": "_id"
+	},
+	{
+		"question_code": "D008",
+		"question_type": "DB",
+		"question": "¿Cuál es la estructura básica de almacenamiento en MongoDB?",
+		"options": ["Documentos", "Filas", "Registros", "Claves"],
+		"answer": "Documentos"
+	},
+	{
+		"question_code": "D009",
+		"question_type": "DB",
+		"question": "¿Qué significa el operador `LIKE` en una consulta SQL?",
+		"options": [
+			"Buscar registros que coinciden exactamente",
+			"Buscar registros que coinciden parcialmente",
+			"Buscar registros en orden descendente",
+			"Buscar registros con valores nulos"
+		],
+		"answer": "Buscar registros que coinciden parcialmente"
+	},
+	{
+		"question_code": "D010",
+		"question_type": "DB",
+		"question": "¿Qué comando SQL se utiliza para modificar la estructura de una tabla existente?",
+		"options": ["MODIFY", "ALTER", "CHANGE", "UPDATE"],
+		"answer": "ALTER"
+	},
+	{
+		"question_code": "D011",
+		"question_type": "DB",
+		"question": "En MongoDB, ¿qué comando se utiliza para insertar múltiples documentos en una colección?",
+		"options": ["insert()", "insertMany()", "add()", "insertMultiple()"],
+		"answer": "insertMany()"
+	},
+	{
+		"question_code": "D012",
+		"question_type": "DB",
+		"question": "En SQL, ¿qué hace el comando `JOIN`?",
+		"options": [
+			"Une dos o más tablas en función de una relación entre ellas",
+			"Ordena los datos de una tabla",
+			"Elimina registros de una tabla",
+			"Modifica los datos de una tabla"
+		],
+		"answer": "Une dos o más tablas en función de una relación entre ellas"
+	},
+	{
+		"question_code": "D013",
+		"question_type": "DB",
+		"question": "¿Qué tipo de `JOIN` se utiliza para combinar registros que tienen coincidencias en ambas tablas?",
+		"options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "OUTER JOIN"],
+		"answer": "INNER JOIN"
+	},
+	{
+		"question_code": "D014",
+		"question_type": "DB",
+		"question": "¿Cuál es un uso típico de las bases de datos no estructuradas?",
+		"options": [
+			"Almacenamiento de grandes cantidades de texto o medios como imágenes o videos",
+			"Gestión de datos financieros con esquemas estrictos",
+			"Almacenamiento de datos en forma de tablas de clientes",
+			"Gestión de inventarios con datos predeterminados"
+		],
+		"answer": "Almacenamiento de grandes cantidades de texto o medios como imágenes o videos"
+	},
+	{
+		"question_code": "D015",
+		"question_type": "DB",
+		"question": "¿Qué tipo de datos se pueden almacenar en una base de datos no estructurada?",
+		"options": [
+			"Textos, imágenes, videos y archivos multimedia",
+			"Solo datos numéricos",
+			"Solo datos de texto",
+			"Solo datos tabulares"
+		],
+		"answer": "Textos, imágenes, videos y archivos multimedia"
+	},
+	{
+		"question_code": "D016",
+		"question_type": "DB",
+		"question": "¿Cuál de las siguientes bases de datos no estructuradas está optimizada para manejar grandes volúmenes de datos distribuidos en múltiples servidores?",
+		"options": ["MongoDB", "MySQL", "Cassandra", "SQLite"],
+		"answer": "Cassandra"
+	},
+	{
+		"question_code": "D017",
+		"question_type": "DB",
+		"question": "¿Qué tipo de datos puede almacenar una base de datos no estructurada como CouchDB?",
+		"options": ["Datos en tablas", "Datos en formato JSON", "Datos solo en texto", "Datos en formato XML"],
+		"answer": "Datos en formato JSON"
+	},
+	{
+		"question_code": "D018",
+		"question_type": "DB",
+		"question": "¿En qué tipo de estructura de datos los elementos se almacenan en posiciones contiguas de memoria y se accede por un índice?",
+		"options": ["Arreglo", "Lista enlazada", "Pila", "Cola"],
+		"answer": "Arreglo"
+	},
+	{
+		"question_code": "D019",
+		"question_type": "DB",
+		"question": "¿Cuál de las siguientes bases de datos se considera no estructurada?",
+		"options": ["MongoDB", "MySQL", "Oracle", "PostgreSQL"],
+		"answer": "MongoDB"
+	},
+	{
+		"question_code": "D020",
+		"question_type": "DB",
+		"question": "¿En una consulta SQL, qué se consigue con un `SELF JOIN`?",
+		"options": [
+			"Unir una tabla consigo misma",
+			"Unir tablas de diferentes bases de datos",
+			"Unir una tabla con una vista",
+			"Unir una tabla con una subconsulta"
+		],
+		"answer": "Unir una tabla consigo misma"
+	},
+	{
+		"question_code": "D021",
+		"question_type": "DB",
+		"question": "¿Qué tipo de `JOIN` devuelve todas las filas de la tabla A y las filas coincidentes de la tabla B, mostrando NULL cuando no hay coincidencias en la tabla B?",
+		"options": ["LEFT JOIN", "RIGHT JOIN", "INNER JOIN", "FULL OUTER JOIN"],
+		"answer": "LEFT JOIN"
+	},
+	{
+		"question_code": "D022",
+		"question_type": "DB",
+		"question": "¿Cuál es el objetivo principal de la normalización en una base de datos?",
+		"options": [
+			"Reducir la redundancia de datos y mejorar la integridad",
+			"Aumentar el tamaño de la base de datos",
+			"Mejorar la velocidad de las consultas sin importar la redundancia",
+			"Disminuir la complejidad de las relaciones entre tablas"
+		],
+		"answer": "Reducir la redundancia de datos y mejorar la integridad"
+	},
+	{
+		"question_code": "D023",
+		"question_type": "DB",
+		"question": "¿Qué característica tiene una tabla en Segunda Forma Normal (2FN)?",
+		"options": [
+			"Debe estar en 1FN y no debe haber dependencias parciales de la clave primaria",
+			"Debe estar en 1FN y no debe haber dependencias transitivas",
+			"Debe estar en 1FN y todos los atributos deben ser clave primaria",
+			"Debe estar en 1FN y cada columna debe depender de un único atributo"
+		],
+		"answer": "Debe estar en 1FN y no debe haber dependencias parciales de la clave primaria"
+	},
+	{
+		"question_code": "D024",
+		"question_type": "DB",
+		"question": "¿Qué es la Tercera Forma Normal (3FN)?",
+		"options": [
+			"Una tabla está en 3FN si está en 2FN y no tiene dependencias transitivas",
+			"Una tabla está en 3FN si no tiene datos redundantes",
+			"Una tabla está en 3FN si está en 1FN y no tiene dependencias parciales",
+			"Una tabla está en 3FN si tiene una clave primaria única"
+		],
+		"answer": "Una tabla está en 3FN si está en 2FN y no tiene dependencias transitivas"
+	},
+	{
+		"question_code": "D025",
+		"question_type": "DB",
+		"question": "¿Cuál de las siguientes afirmaciones describe mejor la Primera Forma Normal (1FN)?",
+		"options": [
+			"Una tabla está en 1FN si no tiene atributos multivaluados y cada celda contiene un solo valor",
+			"Una tabla está en 1FN si tiene claves primarias únicas para cada fila",
+			"Una tabla está en 1FN si todos los valores son dependientes de la clave primaria",
+			"Una tabla está en 1FN si no tiene redundancias"
+		],
+		"answer": "Una tabla está en 1FN si no tiene atributos multivaluados y cada celda contiene un solo valor"
+	}
+]

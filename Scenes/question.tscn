@@ -1,0 +1,180 @@
+[gd_scene load_steps=4 format=3 uid="uid://27e77bi2qfme"]
+
+[ext_resource type="Script" path="res://Scripts/question.gd" id="1_g5a7y"]
+[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8-bit-hud.ttf" id="1_iiwj6"]
+[ext_resource type="FontFile" uid="uid://dsni156ru77g5" path="res://Assets/Fonts/VP Pixel W05 Medium.otf" id="3_jbe2e"]
+
+[node name="Question" type="Node2D"]
+script = ExtResource("1_g5a7y")
+
+[node name="Time" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 450.0
+offset_top = 20.0
+offset_right = 506.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_iiwj6")
+theme_override_font_sizes/font_size = 20
+text = "TIEMPO : 20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="Time"]
+process_callback = 0
+autostart = true
+
+[node name="Questions" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 360.5
+offset_top = 65.5
+offset_right = 597.5
+offset_bottom = 89.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_iiwj6")
+theme_override_font_sizes/font_size = 15
+text = "PREGUNTAS : 8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Question" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 265.0
+offset_right = 932.0
+offset_bottom = 370.0
+theme_override_fonts/font = ExtResource("3_jbe2e")
+theme_override_font_sizes/font_size = 48
+text = "¿La Pregunta es si Pepito Puede salvar el mundo con solo dos líneas de texto en donde esta el niño y el Ñandú?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button A" type="Button" parent="."]
+offset_left = 76.0
+offset_top = 379.0
+offset_right = 476.0
+offset_bottom = 447.0
+theme_override_fonts/font = ExtResource("3_jbe2e")
+theme_override_font_sizes/font_size = 40
+text = "Pepito los palotes responde"
+autowrap_mode = 2
+
+[node name="Button B" type="Button" parent="."]
+offset_left = 484.0
+offset_top = 379.0
+offset_right = 884.0
+offset_bottom = 447.0
+theme_override_fonts/font = ExtResource("3_jbe2e")
+theme_override_font_sizes/font_size = 40
+text = "Pepito los palotes responde"
+autowrap_mode = 2
+
+[node name="Button C" type="Button" parent="."]
+offset_left = 76.0
+offset_top = 455.0
+offset_right = 476.0
+offset_bottom = 523.0
+theme_override_fonts/font = ExtResource("3_jbe2e")
+theme_override_font_sizes/font_size = 40
+text = "Pepito los palotes responde"
+autowrap_mode = 2
+
+[node name="Button D" type="Button" parent="."]
+offset_left = 484.0
+offset_top = 455.0
+offset_right = 884.0
+offset_bottom = 523.0
+theme_override_fonts/font = ExtResource("3_jbe2e")
+theme_override_font_sizes/font_size = 40
+text = "Pepito los palotes responde"
+autowrap_mode = 2
+
+[node name="Correct" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 76.0
+offset_top = 379.0
+offset_right = 884.0
+offset_bottom = 447.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(3.60981e-07, 0.431357, 6.73831e-07, 1)
+
+[node name="Label" type="Label" parent="Correct"]
+layout_mode = 0
+offset_right = 808.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("1_iiwj6")
+theme_override_font_sizes/font_size = 20
+text = "RESPUESTA CORRECTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Incorrect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 76.0
+offset_top = 379.0
+offset_right = 885.0
+offset_bottom = 447.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0.431373, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Incorrect"]
+layout_mode = 0
+offset_right = 808.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("1_iiwj6")
+theme_override_font_sizes/font_size = 20
+text = "RESPUESTA INCORRECTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeOver" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 76.0
+offset_top = 379.0
+offset_right = 885.0
+offset_bottom = 447.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0.431373, 0, 0, 1)
+
+[node name="Label" type="Label" parent="TimeOver"]
+layout_mode = 0
+offset_right = 808.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("1_iiwj6")
+theme_override_font_sizes/font_size = 20
+text = "SE ACABO EL TIEMPO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button A" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="Button B" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="Button C" to="." method="_on_button_c_pressed"]
+[connection signal="pressed" from="Button D" to="." method="_on_button_d_pressed"]

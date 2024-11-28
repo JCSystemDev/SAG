@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bjxsbha0couvb"]
+
+[ext_resource type="Texture2D" uid="uid://cyeqys6lii05j" path="res://Assets/Sprites/UI/UI.png" id="1_iful6"]
+
+[resource]
+texture = ExtResource("1_iful6")
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 2.0
+region_rect = Rect2(307, 21, 58, 7)

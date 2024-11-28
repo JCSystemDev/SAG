@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcq0ht30y8gbk"]
+
+[ext_resource type="PackedScene" uid="uid://blrosr0libc5j" path="res://Scenes/card.tscn" id="1_0vboq"]
+
+[node name="Hand" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Card" parent="CanvasLayer" instance=ExtResource("1_0vboq")]
+position = Vector2(279, 820)
+scale = Vector2(2, 2)
+card_name = "Golden Armor"
+
+[node name="Card2" parent="CanvasLayer" instance=ExtResource("1_0vboq")]
+position = Vector2(473, 820)
+scale = Vector2(2, 2)
+card_name = "Golden Helmet"
+
+[node name="Card3" parent="CanvasLayer" instance=ExtResource("1_0vboq")]
+position = Vector2(667, 820)
+scale = Vector2(2, 2)
+card_name = "Golden Sword"
+
+[node name="Card4" parent="CanvasLayer" instance=ExtResource("1_0vboq")]
+position = Vector2(861, 820)
+scale = Vector2(2, 2)
+card_name = "Gold Shield"
+
+[node name="Card5" parent="CanvasLayer" instance=ExtResource("1_0vboq")]
+position = Vector2(1055, 820)
+scale = Vector2(2, 2)
+card_name = "Cure"

@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://djg4hy1teosjq"]
+
+[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="1_k8jcy"]
+
+[resource]
+font = ExtResource("1_k8jcy")
+font_size = 15

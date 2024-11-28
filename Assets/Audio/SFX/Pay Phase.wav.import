@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dxysdsmw41lh3"
+path="res://.godot/imported/Pay Phase.wav-3c490360650a98fcc5d69162d30c9655.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/Pay Phase.wav"
+dest_files=["res://.godot/imported/Pay Phase.wav-3c490360650a98fcc5d69162d30c9655.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

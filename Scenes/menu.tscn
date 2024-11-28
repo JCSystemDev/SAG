@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyvoco1nboqyu"]
+
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_ci7q1"]
+[ext_resource type="FontFile" uid="uid://dcgpefmttek3l" path="res://Assets/Fonts/8-bitanco.ttf" id="2_5ijpf"]
+[ext_resource type="Texture2D" uid="uid://dyos37njwcqw" path="res://Assets/Sprites/UI/Ui/Dialog/FacesetBox.png" id="2_46gto"]
+[ext_resource type="Theme" uid="uid://whtf1cxg48ud" path="res://Styles/button.tres" id="4_shvku"]
+[ext_resource type="Texture2D" uid="uid://bwe4xh01osuuw" path="res://Assets/Sprites/Backgrounds/Background 2.png" id="5_c74bg"]
+
+[node name="Menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ci7q1")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 88.0
+offset_right = 896.0
+offset_bottom = 163.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("2_5ijpf")
+theme_override_font_sizes/font_size = 64
+text = "SUPER APRENDE - TRON"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="Node2D" parent="."]
+position = Vector2(0, -16)
+
+[node name="BG" type="Sprite2D" parent="Buttons"]
+position = Vector2(480, 374)
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("2_46gto")
+
+[node name="New Game" type="Button" parent="Buttons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 376.0
+offset_top = 296.0
+offset_right = 636.0
+offset_bottom = 346.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+theme = ExtResource("4_shvku")
+text = "   JUEGO NUEVO "
+
+[node name="Continue Game" type="Button" parent="Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 376.0
+offset_top = 341.0
+offset_right = 636.0
+offset_bottom = 397.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+theme = ExtResource("4_shvku")
+text = "CONTINUAR"
+
+[node name="Quit Game" type="Button" parent="Buttons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 376.0
+offset_top = 392.0
+offset_right = 636.0
+offset_bottom = 442.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+theme = ExtResource("4_shvku")
+text = "SALIR"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(896, 512)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(1, 0.561707, 0.680062, 1)
+position = Vector2(480, 270)
+scale = Vector2(2, 2)
+texture = ExtResource("5_c74bg")
+
+[connection signal="pressed" from="Buttons/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Buttons/Continue Game" to="." method="_on_continue_game_pressed"]
+[connection signal="pressed" from="Buttons/Quit Game" to="." method="_on_quit_game_pressed"]

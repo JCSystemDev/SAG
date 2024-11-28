@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3o6dcrxknk44"]
+
+[ext_resource type="Script" path="res://Scripts/game_zone.gd" id="1_llf18"]
+[ext_resource type="Texture2D" uid="uid://foo888ujt3sw" path="res://Assets/Sprites/Templates/Deck BG.png" id="2_smbbs"]
+[ext_resource type="PackedScene" uid="uid://ohwgoqbg0tra" path="res://Scenes/npc.tscn" id="8_a3f2b"]
+[ext_resource type="PackedScene" uid="uid://27e77bi2qfme" path="res://Scenes/question.tscn" id="8_j7j8a"]
+[ext_resource type="PackedScene" uid="uid://1d6d3ntja4pq" path="res://Scenes/phase.tscn" id="8_o68r8"]
+[ext_resource type="PackedScene" uid="uid://dail5a5a8d0bt" path="res://Scenes/player.tscn" id="8_vunv7"]
+[ext_resource type="PackedScene" uid="uid://0eq60ymgekep" path="res://Scenes/notifications.tscn" id="12_jul5n"]
+[ext_resource type="PackedScene" uid="uid://dq23rh5crhlmk" path="res://Scenes/parallax.tscn" id="12_nb3cj"]
+
+[node name="GameZone" type="Node2D" node_paths=PackedStringArray("player", "phase", "notifications")]
+script = ExtResource("1_llf18")
+player = NodePath("Player")
+phase = NodePath("Phase")
+notifications = NodePath("Notifications")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+modulate = Color(0.0784314, 0.105882, 0.105882, 0.588235)
+position = Vector2(480, 270)
+scale = Vector2(6, 6)
+texture = ExtResource("2_smbbs")
+
+[node name="Player" parent="." instance=ExtResource("8_vunv7")]
+position = Vector2(130, 200)
+
+[node name="Enemy" parent="." instance=ExtResource("8_a3f2b")]
+position = Vector2(830, 200)
+
+[node name="Phase" parent="." instance=ExtResource("8_o68r8")]
+position = Vector2(480, 267)
+scale = Vector2(1, 1)
+
+[node name="Background Parallax" parent="." instance=ExtResource("12_nb3cj")]
+
+[node name="Notifications" parent="." instance=ExtResource("12_jul5n")]
+visible = false
+position = Vector2(319, 86)
+
+[node name="Question" parent="." instance=ExtResource("8_j7j8a")]

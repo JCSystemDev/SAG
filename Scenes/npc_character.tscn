@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://db1p66a5f7ema"]
+
+[ext_resource type="Script" path="res://Scripts/npc_character.gd" id="1_kh3ob"]
+[ext_resource type="SpriteFrames" uid="uid://b723dgiohsaoa" path="res://Animations/enemy_idle.tres" id="2_ad0dw"]
+[ext_resource type="PackedScene" uid="uid://dsyb48r25156o" path="res://Scenes/interaction_area.tscn" id="3_mjvkf"]
+[ext_resource type="Texture2D" uid="uid://b3htfekpaf1ij" path="res://Assets/Sprites/Player/Shadow.png" id="4_4j2vn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfeil"]
+size = Vector2(16, 16)
+
+[node name="NPCCharacter" type="StaticBody2D"]
+scale = Vector2(3, 3)
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_kh3ob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gfeil")
+debug_color = Color(0.837749, 0, 0.163639, 0.42)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+sprite_frames = ExtResource("2_ad0dw")
+animation = &"idle"
+
+[node name="Interaction Area" parent="." instance=ExtResource("3_mjvkf")]
+scale = Vector2(2.5, 2.5)
+action_name = "HABLAR"
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(0, 6.66667)
+texture = ExtResource("4_4j2vn")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbgi7x1flfmd"
+path="res://.godot/imported/Electromagnetic Waves.mp3-c849a65d5a3f173fa3dc6134b7e71123.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Electromagnetic Waves.mp3"
+dest_files=["res://.godot/imported/Electromagnetic Waves.mp3-c849a65d5a3f173fa3dc6134b7e71123.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

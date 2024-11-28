@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://r8hm1ggs8iie"
+path="res://.godot/imported/Down Stats.wav-888c20f28f6a98d0f25f63e295643cda.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/Down Stats.wav"
+dest_files=["res://.godot/imported/Down Stats.wav-888c20f28f6a98d0f25f63e295643cda.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
