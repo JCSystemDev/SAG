@@ -63,7 +63,6 @@ offset_right = 476.0
 offset_bottom = 447.0
 theme_override_fonts/font = ExtResource("3_jbe2e")
 theme_override_font_sizes/font_size = 40
-text = "Pepito los palotes responde"
 autowrap_mode = 2
 
 [node name="Button B" type="Button" parent="."]
@@ -73,7 +72,6 @@ offset_right = 884.0
 offset_bottom = 447.0
 theme_override_fonts/font = ExtResource("3_jbe2e")
 theme_override_font_sizes/font_size = 40
-text = "Pepito los palotes responde"
 autowrap_mode = 2
 
 [node name="Button C" type="Button" parent="."]
@@ -83,7 +81,6 @@ offset_right = 476.0
 offset_bottom = 523.0
 theme_override_fonts/font = ExtResource("3_jbe2e")
 theme_override_font_sizes/font_size = 40
-text = "Pepito los palotes responde"
 autowrap_mode = 2
 
 [node name="Button D" type="Button" parent="."]
@@ -93,7 +90,6 @@ offset_right = 884.0
 offset_bottom = 523.0
 theme_override_fonts/font = ExtResource("3_jbe2e")
 theme_override_font_sizes/font_size = 40
-text = "Pepito los palotes responde"
 autowrap_mode = 2
 
 [node name="Correct" type="ColorRect" parent="."]

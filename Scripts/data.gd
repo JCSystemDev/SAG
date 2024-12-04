@@ -25,18 +25,25 @@ var player_stats_default = [{
 	"player_hp": 5,
 	"player_exp": 0,
 	"player_position_x": 480,
-	"player_position_y": 420,
+	"player_position_y": 440,
 	"player_sprite":"",
 	"player_portrait":"" ,
-	"player_type":""
+	"player_class":"",
+	"programming_certificate":false,
+	"hardware_certificate":false,
+	"database_certificate":false,
+	"cybersecurity_certificate":false
 	}]
 
 # NPC Variables
 var npc_summon: String
 var npc_negative: String
 var npc_question: String
+var npc_win: String
+var npc_lose: String
 var npc_name: String
 var npc_texture: Texture2D
+var npc_type: String
 
 # Build Questions
 func _get_question(code_question: String):
@@ -47,6 +54,7 @@ func _get_question(code_question: String):
 			current_options = question["options"]
 			
 func _get_question_list(type_question: String):
+	current_type = type_question
 	for question in questions:
 		if question["question_type"] == type_question:
 			question_list.append(question["question_code"])

@@ -20,11 +20,12 @@ func _ready():
 func _on_interact():
 	for npc in DataManager.npcs:
 		if npc_name == npc["npc_name"]: 
-			DataManager.npc_question = npc["dialogue"]
+			DataManager.npc_question = npc["question"]
 			DataManager.npc_negative = npc["negative"]
+			DataManager.npc_lose = npc["lose_game"]
+			DataManager.npc_win = npc["win_game"]
 			DataManager.npc_name = npc["npc_realname"]
 			DataManager.npc_texture = load(npc["npc_sprite"])	
 	DialogueManager._load_dialogue_box(DataManager.npc_question, DataManager.npc_texture, DataManager.npc_name)
 	DialogueManager._play_dialogue_box()
-	DialogueManager.yes_button.show()
-	DialogueManager.no_button.show()
+	DialogueManager._show_buttons()

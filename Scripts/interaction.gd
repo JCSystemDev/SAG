@@ -31,7 +31,7 @@ func _sort_by_distance_to_player(area1, area2):
 	return area1_to_player < area2_to_player
 
 func _input(event):
-	if event.is_action_pressed("ui_accept") && can_interact && !DialogueManager.in_dialogue:
+	if event.is_action_pressed("ui_accept") && can_interact && !DialogueManager.dialogue_box.visible:
 		if active_areas.size() > 0:
 			can_interact = false
 			interaction_label.hide()

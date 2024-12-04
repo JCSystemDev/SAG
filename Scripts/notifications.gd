@@ -6,9 +6,10 @@ class_name Notifications extends Node2D
 @onready var animation_player = $AnimationPlayer
 @onready var win_label = $"Endgame Notification/Win Buttons/Win Message"
 @onready var lose_label = $"Endgame Notification/Lose Buttons/Lose Message"
+@onready var certificate_sprite: Sprite2D = $"Endgame Notification/Win Buttons/Certificate"
 
 func _on_exit_button_pressed():
-	AudioManager.play_sound("Discard.wav")
+	AudioManager.play_sound("Click.wav")
 	Transition.load_scene(world, "transition")
 
 func _on_retry_button_pressed():
@@ -16,5 +17,5 @@ func _on_retry_button_pressed():
 	Transition.reaload_scene("transition")
 
 func _on_end_button_pressed():
-	AudioManager.play_sound("Discard.wav")
+	AudioManager.play_sound("Click.wav")
 	Transition.load_scene(world, "transition")	

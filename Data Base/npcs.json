@@ -3,8 +3,10 @@
 		"npc_name": "BeardCode",
 		"npc_realname": "Barba Programa",
 		"npc_sprite": "res://Assets/Sprites/Portraits/BeardCode.png",
-		"dialogue": "Cof, cof. ¿Deseas enfrentar un reto sobre programación?",
+		"question": "Cof, cof. ¿Deseas enfrentar un reto sobre programación?.",
 		"negative": "Cof, cof. Pues tú te lo pierdes aprendiz.",
+		"lose_game":"Cof, cof. Necesitas practicar más programación.",
+		"win_game":"Cof, cof. Debo mejorar mis conocimientos de programación.",
 		"npc_exp": 5,
 		"npc_type": "Code"
 	},
@@ -12,8 +14,10 @@
 		"npc_name": "NerdHardware",
 		"npc_realname": "PC Maniaco",
 		"npc_sprite": "res://Assets/Sprites/Portraits/NerdHardware.png",
-		"dialogue": "Jeje. ¿Quieres demostrar tus conocimientos sobre hardware?",
+		"question": "Jeje. ¿Quieres demostrar tus conocimientos sobre hardware?.",
 		"negative": "Jeje. Parece que no eres muy hábil en hardware.",
+		"lose_game":"Jeje. Necesitas mejorar tus conocimientos sobre hardware.",
+		"win_game":"Jeje. He perdido. Debo estudiar más sobre hardware.",
 		"npc_exp": 5,
 		"npc_type": "HW"
 	},
@@ -21,8 +25,10 @@
 		"npc_name": "PunkHack",
 		"npc_realname": "Punk Hacker",
 		"npc_sprite": "res://Assets/Sprites/Portraits/PunkHack.png",
-		"dialogue": "¿Vas a pelear contra este amo del hacking?",
+		"question": "¿Vas a pelear contra este amo del hacking?.",
 		"negative": "Ya veo. Parece que mis habilidades te intimidaron.",
+		"lose_game":"Oh. Tus habilidades de hacking son débiles.",
+		"win_game":"Impresionante. Derrotaste a este amo del hacking.",
 		"npc_exp": 5,
 		"npc_type": "CS"
 	},
@@ -30,9 +36,22 @@
 		"npc_name": "ManagerDB",
 		"npc_realname": "Admin BD",
 		"npc_sprite": "res://Assets/Sprites/Portraits/ManagerDB.png",
-		"dialogue": "Oye, novato. ¿Aceptas un duelo de bases de datos?",
+		"question": "Oye, novato. ¿Aceptas un duelo de bases de datos?",
 		"negative": "Bueno, no todos podemos ser expertos en bases de datos.",
+		"lose_game":"Algun día podrias ser la mitad de lo que bueno que soy",
+		"win_game":"Creo que debería ser más humilde con mis conocimientos...",
 		"npc_exp": 5,
 		"npc_type": "DB"
+	},
+	{
+		"npc_name": "GuardianTI",
+		"npc_realname": "Guardian TI",
+		"npc_sprite": "res://Assets/Sprites/Portraits/GuardianTI.png",
+		"question": "",
+		"negative": "",
+		"lose_game":"",
+		"win_game":"",
+		"npc_exp": 5,
+		"npc_type": "All"
 	}
 ]

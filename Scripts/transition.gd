@@ -7,7 +7,7 @@ var in_transition: bool
 
 func _ready():
 	transition_canvas.hide()
-	color_rect.visible = false
+	color_rect.hide()
 	in_transition = false
 
 func load_scene(target_scene: PackedScene, transition: String):
@@ -17,7 +17,7 @@ func load_scene(target_scene: PackedScene, transition: String):
 	get_tree().change_scene_to_packed(target_scene)
 	animation_player.play_backwards(transition)
 	await animation_player.animation_finished
-	color_rect.visible = false
+	color_rect.hide()
 	transition_canvas.hide()
 	
 func reaload_scene(transition: String):
@@ -27,7 +27,7 @@ func reaload_scene(transition: String):
 	get_tree().reload_current_scene()
 	animation_player.play_backwards(transition)
 	await animation_player.animation_finished
-	color_rect.visible = false
+	color_rect.hide()
 	transition_canvas.hide()
 	
 func play_transition(transition: String):

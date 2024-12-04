@@ -23,11 +23,7 @@ func _ready():
 	DataManager.question_list.shuffle()
 	questions_label.hide()
 	time_label.hide()
-	question_label.hide()
-	answer_a.hide()
-	answer_b.hide()
-	answer_c.hide()
-	answer_d.hide()
+	_hide_question()
 	get_tree().paused = false
 	AudioManager.play_music("Technocracy.mp3")
 	timer.timeout.connect(_on_timer_tick)
@@ -48,11 +44,7 @@ func _on_timer_tick():
 		timer.stop()
 		question_count -= 1
 		update_questions_label()
-		question_label.hide()
-		answer_a.hide()
-		answer_b.hide()
-		answer_c.hide()
-		answer_d.hide()
+		_hide_question()
 		timeover.show()
 		TweenManager._appear_tween(timeover)
 		TweenManager._color_tween(timeover, Color(0.5, 0.0, 0.0), Color(1.0, 0.5, 0.5))
@@ -65,26 +57,12 @@ func _on_timer_tick():
 		AudioManager.play_sound("Attack Phase.wav")
 		await get_tree().create_timer(1).timeout
 		if game_zone.player.current_hp <= 0:
-			game_zone.player_battle.hide()
 			game_zone.player.player_anim.play("player_death")
-			timer.stop()
-			time_label.hide()
-			game_zone.question.hide()
-			AudioManager.play_music("Think About It.mp3")
-			game_zone.notifications.show()
-			game_zone.notifications.lose_buttons.show()
-			TweenManager._appear_tween(game_zone.notifications)
-			DataManager._clear_question_list()
+			game_zone.player_battle.hide()
+			_lose_time_over()
 		elif question_count <= 0:
-			timer.stop()
-			time_label.hide()
-			game_zone.question.hide()
-			AudioManager.play_music("Think About It.mp3")
 			game_zone.notifications.lose_label.text = "Se acabaron las preguntas"
-			game_zone.notifications.show()
-			game_zone.notifications.lose_buttons.show()
-			TweenManager._appear_tween(game_zone.notifications)
-			DataManager._clear_question_list()
+			_lose_time_over()
 		else:
 			_call_question()
 
@@ -96,7 +74,6 @@ func _on_button_b_pressed():
 	current_answer = answer_b.text
 	_check_answer()
 	
-
 func _on_button_c_pressed():
 	current_answer = answer_c.text
 	_check_answer()
@@ -104,7 +81,6 @@ func _on_button_c_pressed():
 func _on_button_d_pressed():
 	current_answer = answer_d.text
 	_check_answer()
-
 
 func _call_question():
 	countdown_time = 15
@@ -127,11 +103,8 @@ func _check_answer():
 	timer.stop()
 	question_count -= 1
 	update_questions_label()
-	question_label.hide()
-	answer_a.hide()
-	answer_b.hide()
-	answer_c.hide()
-	answer_d.hide()
+	_hide_question()
+	
 	if current_answer == DataManager.current_answer:
 		correct.show()
 		TweenManager._appear_tween(correct)
@@ -163,6 +136,7 @@ func _check_answer():
 		TweenManager._shake_tween(game_zone.npc)
 		game_zone.npc.npc_animation.play("damage_enemy")
 		AudioManager.play_sound("Defense Phase.wav")
+	
 	else:
 		incorrect.show()
 		TweenManager._appear_tween(incorrect)
@@ -194,8 +168,9 @@ func _check_answer():
 		TweenManager._shake_tween(game_zone.player)
 		game_zone.player.player_anim.play("player_damage")
 		AudioManager.play_sound("Defense Phase.wav")
+		
 	await get_tree().create_timer(1).timeout
-	if question_count <= 0:
+	if question_count < 0:
 		timer.stop()
 		time_label.hide()
 		game_zone.question.hide()
@@ -216,7 +191,8 @@ func _check_answer():
 		game_zone.notifications.lose_buttons.show()
 		TweenManager._appear_tween(game_zone.notifications)
 		DataManager._clear_question_list()
-	elif game_zone.npc.current_hp <= 0:
+	elif game_zone.npc.current_hp <= 0 and question_count >= 0:
+		_get_certificate()
 		game_zone.npc_battle.hide()
 		game_zone.npc.npc_animation.play("death_enemy")
 		timer.stop()
@@ -229,3 +205,38 @@ func _check_answer():
 		DataManager._clear_question_list()
 	else:
 		_call_question()
+		
+func _hide_question():
+	question_label.hide()
+	answer_a.hide()
+	answer_b.hide()
+	answer_c.hide()
+	answer_d.hide()
+	
+func _lose_time_over():
+	timer.stop()
+	time_label.hide()
+	game_zone.question.hide()
+	AudioManager.play_music("Think About It.mp3")
+	game_zone.notifications.show()
+	game_zone.notifications.lose_buttons.show()
+	TweenManager._appear_tween(game_zone.notifications)
+	DataManager._clear_question_list()
+		
+func _get_certificate():
+	var certificate_type: String
+	var certificate_texture: Texture2D
+	if DataManager.current_type == "HW":
+		certificate_type = "Monitor.png"
+		DataManager.player_stats[0]["hardware_certificate"] = true
+	elif DataManager.current_type == "Code":
+		certificate_type = "Keyboard.png"
+		DataManager.player_stats[0]["programming_certificate"] = true
+	elif DataManager.current_type == "CS":
+		certificate_type = "Locked.png"
+		DataManager.player_stats[0]["cybersecurity_certificate"] = true
+	elif DataManager.current_type == "DB":
+		certificate_type = "FloppyDisk.png"
+		DataManager.player_stats[0]["database_certificate"] = true
+	certificate_texture = load("res://Assets/Sprites/Icons/"+certificate_type)
+	game_zone.notifications.certificate_sprite.set_texture(certificate_texture)

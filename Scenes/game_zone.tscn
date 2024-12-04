@@ -51,5 +51,4 @@ position = Vector2(380, 186)
 position = Vector2(0, 5)
 
 [node name="Notifications" parent="." instance=ExtResource("12_jul5n")]
-visible = false
 position = Vector2(319, 324)

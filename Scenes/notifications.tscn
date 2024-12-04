@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://0eq60ymgekep"]
+[gd_scene load_steps=10 format=3 uid="uid://0eq60ymgekep"]
 
 [ext_resource type="Script" path="res://Scripts/notifications.gd" id="1_nx5iy"]
 [ext_resource type="Texture2D" uid="uid://6viku28itdwd" path="res://Assets/Sprites/Templates/Screen Marquee.png" id="2_g0y1e"]
 [ext_resource type="FontFile" uid="uid://8q3wd1f811wn" path="res://Assets/Sprites/UI/Ui/Font/NormalFont.ttf" id="4_2xc0f"]
 [ext_resource type="Theme" uid="uid://whtf1cxg48ud" path="res://Styles/button.tres" id="4_f1tme"]
 [ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8-bit-hud.ttf" id="5_xh5vh"]
+[ext_resource type="Texture2D" uid="uid://bbahn8f6efvm7" path="res://Assets/Sprites/Icons/FloppyDisk.png" id="6_wq6gg"]
 
 [sub_resource type="Animation" id="Animation_wpq26"]
 length = 0.001
@@ -32,6 +33,7 @@ _data = {
 }
 
 [node name="Notifications" type="Node2D"]
+visible = false
 position = Vector2(320, 100)
 script = ExtResource("1_nx5iy")
 
@@ -83,10 +85,10 @@ visible = false
 position = Vector2(-160, -76)
 
 [node name="End Button" type="Button" parent="Endgame Notification/Win Buttons"]
-offset_left = 81.0
-offset_top = 55.0
-offset_right = 235.0
-offset_bottom = 91.0
+offset_left = 146.0
+offset_top = 45.0
+offset_right = 300.0
+offset_bottom = 81.0
 theme_override_fonts/font = ExtResource("4_2xc0f")
 theme_override_font_sizes/font_size = 20
 text = "SALIR"
@@ -98,9 +100,14 @@ offset_right = 364.0
 offset_bottom = 26.0
 theme_override_fonts/font = ExtResource("5_xh5vh")
 theme_override_font_sizes/font_size = 11
-text = "Felicitaciones. Ganaste"
+text = "Ganaste un Certificado"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Certificate" type="Sprite2D" parent="Endgame Notification/Win Buttons"]
+position = Vector2(107, 66)
+scale = Vector2(3, 3)
+texture = ExtResource("6_wq6gg")
 
 [node name="Label" type="Label" parent="Endgame Notification"]
 offset_left = -160.0

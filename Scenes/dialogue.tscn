@@ -94,8 +94,6 @@ theme_override_fonts/font = ExtResource("5_yaj14")
 theme_override_font_sizes/font_size = 30
 text = "Esto es una prueba de dialogo. En donde el jugador esta leyendo lo que el personaje le esta mencionando en cada linea."
 autowrap_mode = 3
-visible_characters = 0
-visible_ratio = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
