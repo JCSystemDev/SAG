@@ -5,6 +5,15 @@ class_name Data
 var questions = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/question.json"))
 var npcs = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/npcs.json"))
 
+# Scenes
+var world_scene: PackedScene = load("res://Scenes/world.tscn")
+var menu_scene: PackedScene = load("res://Scenes/menu.tscn")
+var tutorial_scene: PackedScene = load("res://Scenes/tutorial.tscn")
+var new_game_scene: PackedScene = load("res://Scenes/new_game.tscn")
+
+# Menu Variables
+var in_game: bool = false
+
 # Questions
 var question_list: Array = []
 var current_type
@@ -25,10 +34,14 @@ var player_stats_default = [{
 	"player_hp": 5,
 	"player_exp": 0,
 	"player_position_x": 480,
-	"player_position_y": 440,
+	"player_position_y": 460,
 	"player_sprite":"",
 	"player_portrait":"" ,
 	"player_class":"",
+	"win_battles":0,
+	"lose_battles":0,
+	"correct_questions":0,
+	"incorrect_questions":0,
 	"programming_certificate":false,
 	"hardware_certificate":false,
 	"database_certificate":false,
@@ -60,13 +73,15 @@ func _get_question_list(type_question: String):
 			question_list.append(question["question_code"])
 			
 func _clear_question_list():
-	question_list = []
-			
-func _get_player_texture(player_texture: String, portrait_texture: String):
-	player_stats_default[0]["player_sprite"] = player_texture
-	player_stats_default[0]["player_portrait"] = portrait_texture
-	player_sprite = load(player_stats_default[0]["player_sprite"])
-	player_portrait = load(player_stats_default[0]["player_portrait"])
+	question_list = []			
+
+func _set_player_texture(player_texture: String, portrait_texture: String):
+	player_stats[0]["player_sprite"] = player_texture
+	player_stats[0]["player_portrait"] = portrait_texture
+
+func _get_player_texture():
+	player_sprite = load(player_stats[0]["player_sprite"])
+	player_portrait = load(player_stats[0]["player_portrait"])
 
 func _new_game():
 	player_stats = player_stats_default
@@ -80,6 +95,7 @@ func _save_game():
 func _load_game():
 	player_stats_load = JSON.parse_string(FileAccess.get_file_as_string("user://player_stats_saved.json"))
 	player_stats = player_stats_load
+	_get_player_texture()
 	
 func _save_file_exist():
 	player_stats_load = FileAccess.get_file_as_string("user://player_stats_saved.json")

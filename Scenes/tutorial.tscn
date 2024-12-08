@@ -1,3 +1,121 @@
-[gd_scene format=3 uid="uid://c0uri2hq05uog"]
+[gd_scene load_steps=9 format=3 uid="uid://c0uri2hq05uog"]
 
-[node name="Turorial" type="Node"]
+[ext_resource type="Script" path="res://Scripts/tutorial.gd" id="1_xbtf1"]
+[ext_resource type="Texture2D" uid="uid://bo7esskkv8lgh" path="res://Assets/Sprites/Backgrounds/Background 6.png" id="2_epyn8"]
+[ext_resource type="FontFile" uid="uid://g3ewt3rhuayq" path="res://Assets/Fonts/Gameplay.ttf" id="3_bg037"]
+[ext_resource type="Texture2D" uid="uid://canslygy8vtgt" path="res://Assets/Sprites/UI/Tutorial UI 1.png" id="4_so4x1"]
+[ext_resource type="FontFile" uid="uid://dsni156ru77g5" path="res://Assets/Fonts/Textos.otf" id="5_ll2bq"]
+[ext_resource type="Texture2D" uid="uid://cillqeqhvhx1k" path="res://Assets/Sprites/UI/Tutorial UI 2.png" id="6_rq53b"]
+[ext_resource type="Texture2D" uid="uid://dsvgluwn4wubd" path="res://Assets/Sprites/UI/Tutorial UI 4.png" id="7_n7l5x"]
+[ext_resource type="Texture2D" uid="uid://c434fdj22b1y6" path="res://Assets/Sprites/UI/Tutorial UI 3.png" id="8_ieiek"]
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_xbtf1")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(896, 512)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(0.74558, 0.74558, 0.74558, 1)
+position = Vector2(484, 270)
+scale = Vector2(2, 2)
+texture = ExtResource("2_epyn8")
+
+[node name="Background" type="ColorRect" parent="."]
+modulate = Color(0.172549, 0.207843, 0.301961, 0.470588)
+offset_top = 541.0
+offset_right = 209.0
+offset_bottom = 608.0
+rotation = -1.5708
+scale = Vector2(2.58802, 14.4856)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 361.0
+offset_top = 24.0
+offset_right = 625.0
+offset_bottom = 81.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_bg037")
+theme_override_font_sizes/font_size = 48
+text = "TUTORIAL"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="WASD" type="Sprite2D" parent="."]
+position = Vector2(191, 162)
+scale = Vector2(4, 4)
+texture = ExtResource("4_so4x1")
+
+[node name="WASD Label" type="Label" parent="."]
+offset_left = 237.0
+offset_top = 124.0
+offset_right = 815.0
+offset_bottom = 249.0
+theme_override_fonts/font = ExtResource("5_ll2bq")
+theme_override_font_sizes/font_size = 50
+text = "Movimiento del personaje"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Enter" type="Sprite2D" parent="."]
+position = Vector2(192, 335)
+scale = Vector2(4, 4)
+texture = ExtResource("6_rq53b")
+
+[node name="Enter Label" type="Label" parent="."]
+offset_left = 185.0
+offset_top = 192.0
+offset_right = 763.0
+offset_bottom = 317.0
+theme_override_fonts/font = ExtResource("5_ll2bq")
+theme_override_font_sizes/font_size = 50
+text = "Pausar / Reanudar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Esc" type="Sprite2D" parent="."]
+position = Vector2(192, 265)
+scale = Vector2(4, 4)
+texture = ExtResource("7_n7l5x")
+
+[node name="Esc Label" type="Label" parent="."]
+offset_left = 256.0
+offset_top = 257.0
+offset_right = 834.0
+offset_bottom = 382.0
+theme_override_fonts/font = ExtResource("5_ll2bq")
+theme_override_font_sizes/font_size = 50
+text = "Interactuar / Cerrar Diálogo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Left-Click" type="Sprite2D" parent="."]
+position = Vector2(191, 433)
+scale = Vector2(4, 4)
+texture = ExtResource("8_ieiek")
+
+[node name="Left-Click Label" type="Label" parent="."]
+offset_left = 182.0
+offset_top = 330.0
+offset_right = 760.0
+offset_bottom = 455.0
+theme_override_fonts/font = ExtResource("5_ll2bq")
+theme_override_font_sizes/font_size = 50
+text = "Presionar Botones"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start Game" type="Button" parent="."]
+offset_left = 738.0
+offset_top = 455.0
+offset_right = 922.0
+offset_bottom = 507.0
+theme_override_fonts/font = ExtResource("3_bg037")
+theme_override_font_sizes/font_size = 28
+text = "INICIAR"
+
+[connection signal="pressed" from="Start Game" to="." method="_on_start_game_pressed"]

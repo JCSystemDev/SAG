@@ -1,23 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://27e77bi2qfme"]
+[gd_scene load_steps=5 format=3 uid="uid://27e77bi2qfme"]
 
 [ext_resource type="Script" path="res://Scripts/question.gd" id="1_g5a7y"]
 [ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8-bit-hud.ttf" id="1_iiwj6"]
-[ext_resource type="FontFile" uid="uid://dsni156ru77g5" path="res://Assets/Fonts/VP Pixel W05 Medium.otf" id="3_jbe2e"]
+[ext_resource type="Texture2D" uid="uid://bv6t5snecp0ln" path="res://Assets/Sprites/Templates/Description BG.png" id="2_xahfq"]
+[ext_resource type="FontFile" uid="uid://dsni156ru77g5" path="res://Assets/Fonts/Textos.otf" id="3_jbe2e"]
 
 [node name="Question" type="Node2D"]
 script = ExtResource("1_g5a7y")
+
+[node name="BG Time" type="Sprite2D" parent="."]
+modulate = Color(0.176471, 0.176471, 0.176471, 0.392157)
+position = Vector2(476.5, 55)
+scale = Vector2(3.13095, 1.90476)
+texture = ExtResource("2_xahfq")
 
 [node name="Time" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 450.0
-offset_top = 20.0
-offset_right = 506.0
-offset_bottom = 52.0
+offset_left = 378.0
+offset_top = 24.0
+offset_right = 573.0
+offset_bottom = 56.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_iiwj6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 15
 text = "TIEMPO : 20"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -32,14 +39,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 360.5
-offset_top = 65.5
-offset_right = 597.5
-offset_bottom = 89.5
+offset_left = 396.0
+offset_top = 58.0
+offset_right = 554.0
+offset_bottom = 82.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_iiwj6")
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 10
 text = "PREGUNTAS : 8"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -50,7 +57,7 @@ offset_top = 265.0
 offset_right = 932.0
 offset_bottom = 370.0
 theme_override_fonts/font = ExtResource("3_jbe2e")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 40
 text = "¿La Pregunta es si Pepito Puede salvar el mundo con solo dos líneas de texto en donde esta el niño y el Ñandú?"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -62,7 +69,7 @@ offset_top = 379.0
 offset_right = 476.0
 offset_bottom = 447.0
 theme_override_fonts/font = ExtResource("3_jbe2e")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 autowrap_mode = 2
 
 [node name="Button B" type="Button" parent="."]
@@ -71,7 +78,7 @@ offset_top = 379.0
 offset_right = 884.0
 offset_bottom = 447.0
 theme_override_fonts/font = ExtResource("3_jbe2e")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 autowrap_mode = 2
 
 [node name="Button C" type="Button" parent="."]
@@ -80,7 +87,7 @@ offset_top = 455.0
 offset_right = 476.0
 offset_bottom = 523.0
 theme_override_fonts/font = ExtResource("3_jbe2e")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 autowrap_mode = 2
 
 [node name="Button D" type="Button" parent="."]
@@ -89,7 +96,7 @@ offset_top = 455.0
 offset_right = 884.0
 offset_bottom = 523.0
 theme_override_fonts/font = ExtResource("3_jbe2e")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 autowrap_mode = 2
 
 [node name="Correct" type="ColorRect" parent="."]

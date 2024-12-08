@@ -12,7 +12,7 @@ func _ready():
 	_set_player_pos()
 
 func _input(event):
-	if event.is_action_pressed("ui_cancel") && !Transition.in_transition && !DialogueManager.in_dialogue:
+	if event.is_action_pressed("ui_cancel") && !Transition.in_transition && !DialogueManager.visible:
 		swap_pause_state()
 		
 func _get_player_pos():

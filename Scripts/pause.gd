@@ -9,10 +9,14 @@ class_name Pause
 @onready var resume_button: Button = $"Buttons/Resume Button"
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var message_label: Label = $"Text Box/Message"
-@onready var programming_certificate: Sprite2D = $Certificates/Programming
-@onready var database_certificate: Sprite2D = $"Certificates/Data Base"
-@onready var cybersecurity_certificate: Sprite2D = $"Certificates/Cyber Security"
-@onready var hardware_certificate: Sprite2D = $Certificates/Hardware 
+@onready var programming_certificate: Sprite2D = $Player/Certificates/Programming
+@onready var database_certificate: Sprite2D = $"Player/Certificates/Data Base"
+@onready var cybersecurity_certificate: Sprite2D = $"Player/Certificates/Cyber Security"
+@onready var hardware_certificate: Sprite2D = $Player/Certificates/Hardware 
+@onready var wins: Label = $"Player/Stats/Wins Label"
+@onready var loses: Label = $"Player/Stats/Loses Label"
+@onready var corrects: Label = $"Player/Stats/Corrects Label"
+@onready var incorrects: Label = $"Player/Stats/Incorrects Label"
 
 func _ready():
 	player_name_label.set_text(DataManager.player_stats[0]["player_name"])
@@ -24,6 +28,7 @@ func parallax_bg(delta_time) -> void:
 
 func _process(delta):
 	_get_certificates()
+	_get_stats()
 	parallax_bg(delta)
 	
 
@@ -37,9 +42,14 @@ func _on_resume_button_pressed():
 
 func _on_save_button_pressed():
 	AudioManager.play_sound("Equip.wav")
+	animation_player.play("show_text_box")
 	DataManager._save_game()
 	
-
+func _get_stats():
+	wins.set_text(str(DataManager.player_stats[0]["win_battles"]))
+	loses.set_text(str(DataManager.player_stats[0]["lose_battles"]))
+	corrects.set_text(str(DataManager.player_stats[0]["correct_questions"]))
+	incorrects.set_text(str(DataManager.player_stats[0]["incorrect_questions"]))
 
 func _get_certificates():
 	if DataManager.player_stats[0]["hardware_certificate"]:
@@ -61,3 +71,7 @@ func _get_certificates():
 		cybersecurity_certificate.show()
 	else:
 		cybersecurity_certificate.hide()
+
+
+func _on_export_button_pressed():
+	pass # Replace with function body.

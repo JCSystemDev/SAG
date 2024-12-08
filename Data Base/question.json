@@ -520,12 +520,12 @@
 	"question_type": "HW",
 	"question": "¿Qué estándar conecta almacenamiento externo?",
 	"options": [
-	  "USB 3.2",
-	  "HDMI",
+	  "USB",
+	  "Firewire",
 	  "PCIe",
 	  "VGA"
 	],
-	"answer": "USB 3.2"
+	"answer": "USB"
   },
   {
 	"question_code": "H020",
@@ -600,304 +600,304 @@
 	"answer": "Cantidad de CPU físicas"
   },
   {
-	"question_code": "S001",
+		"question_code": "CS001",
+		"question_type": "CS",
+		"question": "¿Qué principio del modelo CIA asegura que la información esté accesible cuando se necesita?",
+		"options": [
+			"Confidencialidad",
+			"Integridad",
+			"Disponibilidad",
+			"Privacidad"
+		],
+		"answer": "Disponibilidad"
+	},
+	{
+		"question_code": "CS002",
+		"question_type": "CS",
+		"question": "¿Qué describe una vulnerabilidad?",
+		"options": [
+			"Acción intencional.",
+			"Punto débil.",
+			"Ataque a datos.",
+			"Intento no autorizado."
+		],
+		"answer": "Punto débil."
+	},
+	{
+		"question_code": "CS003",
+		"question_type": "CS",
+		"question": "¿Qué método de autenticación se basa en algo que el usuario sabe?",
+		"options": [
+			"Huella digital",
+			"Token físico",
+			"Contraseña",
+			"Reconocimiento facial"
+		],
+		"answer": "Contraseña"
+	},
+	{
+		"question_code": "CS004",
+		"question_type": "CS",
+		"question": "¿Qué hace un gusano informático?",
+		"options": [
+			"Propagación automática.",
+			"Se disfraza.",
+			"Es inofensivo.",
+			"Infecta móviles."
+		],
+		"answer": "Propagación automática."
+	},
+	{
+		"question_code": "CS005",
+		"question_type": "CS",
+		"question": "¿Qué malware exige un rescate a cambio de liberar los datos del usuario?",
+		"options": [
+			"Spyware",
+			"Ransomware",
+			"Adware",
+			"Rootkit"
+		],
+		"answer": "Ransomware"
+	},
+	{
+		"question_code": "CS006",
+		"question_type": "CS",
+		"question": "¿Cuál es la función principal de un firewall en una red?",
+		"options": [
+			"Detectar vulnerabilidades en software.",
+			"Bloquear tráfico malicioso entrante y saliente.",
+			"Aumentar la velocidad de internet.",
+			"Monitorear el uso de datos en redes sociales."
+		],
+		"answer": "Bloquear tráfico malicioso entrante y saliente."
+	},
+	{
+		"question_code": "CS007",
+		"question_type": "CS",
+		"question": "¿Qué protocolo se utiliza para cifrar datos en tránsito en un sitio web seguro?",
+		"options": [
+			"HTTP",
+			"SSL/TLS",
+			"FTP",
+			"IPSec"
+		],
+		"answer": "SSL/TLS"
+	},
+	{
+		"question_code": "CS008",
+		"question_type": "CS",
+		"question": "¿Qué ataque implica inundar un servidor con tráfico falso para que no funcione?",
+		"options": [
+			"Phishing",
+			"DDoS",
+			"Sniffing",
+			"ARP poisoning"
+		],
+		"answer": "DDoS"
+	},
+	{
+		"question_code": "CS009",
+		"question_type": "CS",
+		"question": "¿Qué ejemplo describe spoofing?",
+		"options": [
+			"SQL injection.",
+			"IP falsa.",
+			"Leer datos.",
+			"Monitorear red."
+		],
+		"answer": "IP falsa."
+	},
+	{
+		"question_code": "CS010",
+		"question_type": "CS",
+		"question": "¿Qué herramienta puede prevenir un ataque de ARP poisoning?",
+		"options": [
+			"IDS/IPS",
+			"Un software de monitoreo de CPU.",
+			"Firewall avanzado.",
+			"Un antivirus estándar."
+		],
+		"answer": "IDS/IPS"
+	},
+	{
+		"question_code": "CS011",
+		"question_type": "CS",
+		"question": "¿Qué distingue al cifrado asimétrico?",
+		"options": [
+			"Misma clave.",
+			"Dos claves.",
+			"Menos seguro.",
+			"Solo multimedia."
+		],
+		"answer": "Dos claves."
+	},
+	{
+		"question_code": "CS012",
+		"question_type": "CS",
+		"question": "¿Qué algoritmo es adecuado para generar un hash criptográfico?",
+		"options": [
+			"AES",
+			"SHA-256",
+			"RSA",
+			"HTTP"
+		],
+		"answer": "SHA-256"
+	},
+	{
+		"question_code": "CS013",
+		"question_type": "CS",
+		"question": "¿Para qué sirve un certificado digital?",
+		"options": [
+			"Cifrar contraseñas.",
+			"Verificar identidad.",
+			"Bloquear accesos.",
+			"Optimizar sistema."
+		],
+		"answer": "Verificar identidad."
+	},
+	{
+		"question_code": "CS014",
+		"question_type": "CS",
+		"question": "¿Qué sistema operativo implementa SELinux para mejorar la seguridad?",
+		"options": [
+			"Windows",
+			"macOS",
+			"Linux",
+			"Android"
+		],
+		"answer": "Linux"
+	},
+	{
+		"question_code": "CS015",
+		"question_type": "CS",
+		"question": "¿Qué define el RBAC?",
+		"options": [
+			"Acceso por ubicación.",
+			"Roles predefinidos.",
+			"Acceso completo.",
+			"Método obsoleto."
+		],
+		"answer": "Roles predefinidos."
+	},
+	{
+		"question_code": "CS016",
+		"question_type": "CS",
+		"question": "¿Qué práctica asegura un sistema?",
+		"options": [
+			"Deshabilitar firewall.",
+			"Actualizar parches.",
+			"Eliminar herramientas.",
+			"Compartir credenciales."
+		],
+		"answer": "Actualizar parches."
+	},
+	{
+		"question_code": "CS017",
+		"question_type": "CS",
+		"question": "¿Qué es Penetration Testing?",
+		"options": [
+			"Eliminar malware.",
+			"Evaluar seguridad.",
+			"Optimizar red.",
+			"Monitorear usuarios."
+		],
+		"answer": "Evaluar seguridad."
+	},
+	{
+	"question_code": "CS018",
 	"question_type": "CS",
-	"question": "¿Cuál de estos equipos se encarga de la defensa en ciberseguridad?",
+	"question": "¿Qué herramienta se utiliza comúnmente para capturar paquetes de red?",
 	"options": [
-	  "Blanco",
-	  "Amarillo",
-	  "Azul",
-	  "Rojo"
-	],
-	"answer": "Azul"
-  },
-  {
-	"question_code": "S002",
-	"question_type": "CS",
-	"question": "¿Qué herramienta se usa para analizar vulnerabilidades en redes?",
-	"options": [
-	  "Wireshark",
-	  "Photoshop",
-	  "Excel",
-	  "AutoCAD"
+		"Metasploit",
+		"Wireshark",
+		"Kali Linux",
+		"Firewall de hardware"
 	],
 	"answer": "Wireshark"
   },
   {
-	"question_code": "S003",
+	"question_code": "CS019",
 	"question_type": "CS",
-	"question": "¿Término que describe un ataque donde se sobrecarga un servidor con solicitudes?",
+	"question": "¿Qué hace el Red Team?",
 	"options": [
-	  "Phishing",
-	  "DoS",
-	  "MITM",
-	  "SQL Injection"
+		"Defiende sistemas.",
+		"Simula ataques.",
+		"Monitorea usuarios.",
+		"Optimiza apps."
 	],
-	"answer": "DoS"
+	"answer": "Simula ataques."
   },
   {
-	"question_code": "S004",
+	"question_code": "CS020",
 	"question_type": "CS",
-	"question": "¿Qué equipo realiza auditorías de seguridad para encontrar vulnerabilidades?",
+	"question": "¿Qué hace el Blue Team?",
 	"options": [
-	  "Equipo Azul",
-	  "Equipo Rojo",
-	  "Equipo Blanco",
-	  "Equipo Amarillo"
+		"Simula ataques.",
+		"Defiende sistemas.",
+		"Elimina fallos.",
+		"Opera en LAN."
 	],
-	"answer": "Equipo Rojo"
+	"answer": "Defiende sistemas."
   },
   {
-	"question_code": "S005",
+	"question_code": "CS021",
 	"question_type": "CS",
-	"question": "¿Qué representa un certificado SSL/TLS en un sitio web?",
+	"question": "¿Qué se asegura en la cadena de custodia?",
 	"options": [
-	  "Seguridad de transporte",
-	  "Velocidad de carga",
-	  "Cantidad de tráfico",
-	  "Privacidad del contenido"
+		"Autenticidad",
+		"Redundancia",
+		"Velocidad",
+		"Costo"
 	],
-	"answer": "Seguridad de transporte"
+	"answer": "Autenticidad"
   },
   {
-	"question_code": "S006",
+	"question_code": "CS022",
 	"question_type": "CS",
-	"question": "¿Qué significa el término 'phishing' en ciberseguridad?",
+	"question": "¿Cuál es una herramienta forense?",
 	"options": [
-	  "Acceso no autorizado a un sistema",
-	  "Robo de información a través de correos fraudulentos",
-	  "Desencriptación de datos cifrados",
-	  "Exploración de redes en busca de vulnerabilidades"
+		"EnCase",
+		"Wireshark",
+		"Metasploit",
+		"Photoshop"
 	],
-	"answer": "Robo de información a través de correos fraudulentos"
+	"answer": "EnCase"
   },
   {
-	"question_code": "S007",
+	"question_code": "CS023",
 	"question_type": "CS",
-	"question": "¿Cuál es el propósito principal de un firewall?",
+	"question": "¿Qué es clave en un plan de respuesta a incidentes?",
 	"options": [
-	  "Filtrar tráfico en la red",
-	  "Cifrar datos",
-	  "Detectar amenazas móviles",
-	  "Auditar redes"
+		"Procedimientos",
+		"Velocidad",
+		"Parches",
+		"Evasión"
 	],
-	"answer": "Filtrar tráfico en la red"
+	"answer": "Procedimientos"
   },
   {
-	"question_code": "S008",
+	"question_code": "CS024",
 	"question_type": "CS",
-	"question": "¿Qué protocolo se usa comúnmente para transferir archivos de forma segura?",
+	"question": "¿Qué busca la recuperación ante desastres?",
 	"options": [
-	  "FTP",
-	  "SMTP",
-	  "SFTP",
-	  "HTTP"
+		"Continuidad",
+		"Optimización",
+		"Velocidad",
+		"Diversión"
 	],
-	"answer": "SFTP"
+	"answer": "Continuidad"
   },
   {
-	"question_code": "S009",
+	"question_code": "CS025",
 	"question_type": "CS",
-	"question": "¿Qué herramienta se utiliza para realizar análisis de malware?",
+	"question": "¿Qué permite Autopsy?",
 	"options": [
-	  "Metasploit",
-	  "Wireshark",
-	  "IDA Pro",
-	  "Postman"
+		"Análisis",
+		"Cifrado",
+		"Gestión",
+		"Visualización"
 	],
-	"answer": "IDA Pro"
-  },
-  {
-	"question_code": "S010",
-	"question_type": "CS",
-	"question": "¿Qué es un ataque de fuerza bruta?",
-	"options": [
-	  "Adivinar contraseñas probando combinaciones",
-	  "Interceptar comunicaciones en una red",
-	  "Inyectar código malicioso",
-	  "Bloquear un servidor con solicitudes"
-	],
-	"answer": "Adivinar contraseñas probando combinaciones"
-  },
-  {
-	"question_code": "S011",
-	"question_type": "CS",
-	"question": "¿Qué tipo de cifrado utiliza una clave pública y una clave privada?",
-	"options": [
-	  "Cifrado simétrico",
-	  "Cifrado asimétrico",
-	  "Hashing",
-	  "Codificación Base64"
-	],
-	"answer": "Cifrado asimétrico"
-  },
-  {
-	"question_code": "S012",
-	"question_type": "CS",
-	"question": "¿Qué hace un ataque 'Man-in-the-Middle' (MITM)?",
-	"options": [
-	  "Intercepta comunicaciones",
-	  "Infecta con ransomware",
-	  "Bloquea acceso a sitios web",
-	  "Explora vulnerabilidades"
-	],
-	"answer": "Intercepta comunicaciones"
-  },
-  {
-	"question_code": "S013",
-	"question_type": "CS",
-	"question": "¿Qué puerto utiliza el protocolo HTTPS por defecto?",
-	"options": [
-	  "21",
-	  "80",
-	  "443",
-	  "22"
-	],
-	"answer": "443"
-  },
-  {
-	"question_code": "S014",
-	"question_type": "CS",
-	"question": "¿Qué técnica utiliza un atacante para ocultar su identidad en Internet?",
-	"options": [
-	  "Ofuscación",
-	  "Proxy inverso",
-	  "VPN",
-	  "Túnel SSH"
-	],
-	"answer": "VPN"
-  },
-  {
-	"question_code": "S015",
-	"question_type": "CS",
-	"question": "¿Qué componente verifica las identidades en una infraestructura de clave pública?",
-	"options": [
-	  "Servidor web",
-	  "Certificado raíz",
-	  "Autoridad certificadora",
-	  "Proxy"
-	],
-	"answer": "Autoridad certificadora (CA)"
-  },
-  {
-	"question_code": "S016",
-	"question_type": "CS",
-	"question": "¿Qué tipo de ataque aprovecha fallas en consultas SQL?",
-	"options": [
-	  "XSS",
-	  "SQL Injection",
-	  "Phishing",
-	  "Man-in-the-Middle"
-	],
-	"answer": "SQL Injection"
-  },
-  {
-	"question_code": "S017",
-	"question_type": "CS",
-	"question": "¿Qué es la autenticación multifactor (MFA)?",
-	"options": [
-	  "Múltiples contraseñas para un sistema",
-	  "Varios niveles de cifrado",
-	  "Dos o más métodos de verificación",
-	  "Validación solo con biometría"
-	],
-	"answer": "Dos o más métodos de verificación"
-  },
-  {
-	"question_code": "S018",
-	"question_type": "CS",
-	"question": "¿Qué tipo de software puede detectar y eliminar malware?",
-	"options": [
-	  "Firewall",
-	  "Antivirus",
-	  "Analizador de redes",
-	  "Software de gestión de contraseñas"
-	],
-	"answer": "Antivirus"
-  },
-  {
-	"question_code": "S019",
-	"question_type": "CS",
-	"question": "¿Cuál es la técnica principal de un ataque XSS?",
-	"options": [
-	  "Inyectar código malicioso",
-	  "Interceptar comunicaciones",
-	  "Robar datos sensibles",
-	  "Sobrecargar un servidor"
-	],
-	"answer": "Inyectar código malicioso"
-  },
-  {
-	"question_code": "S020",
-	"question_type": "CS",
-	"question": "¿Qué herramienta puede usarse para pruebas de penetración en sistemas web?",
-	"options": [
-	  "Wireshark",
-	  "Nmap",
-	  "Burp Suite",
-	  "VLC"
-	],
-	"answer": "Burp Suite"
-  },
-  {
-	"question_code": "S021",
-	"question_type": "CS",
-	"question": "¿Qué hace un ataque de ransomware?",
-	"options": [
-	  "Cifra archivos y exige rescate",
-	  "Infecta con virus autodestructivos",
-	  "Crea comunicación encubierta",
-	  "Roba credenciales con phishing"
-	],
-	"answer": "Cifra archivos y exige rescate"
-  },
-  {
-	"question_code": "S022",
-	"question_type": "CS",
-	"question": "¿Qué protocolo es más seguro para acceder remotamente a un servidor?",
-	"options": [
-	  "Telnet",
-	  "FTP",
-	  "SSH",
-	  "SMTP"
-	],
-	"answer": "SSH"
-  },
-  {
-	"question_code": "S023",
-	"question_type": "CS",
-	"question": "¿Qué verifica una prueba de penetración?",
-	"options": [
-	  "Cantidad de tráfico web",
-	  "Resistencia ante ataques",
-	  "Calidad del código",
-	  "Velocidad de carga"
-	],
-	"answer": "Resistencia ante ataques"
-  },
-  {
-	"question_code": "S024",
-	"question_type": "CS",
-	"question": "¿Qué tipo de amenaza es un 'exploit'?",
-	"options": [
-	  "Software que usa vulnerabilidades",
-	  "Virus que se replica solo",
-	  "Ataque a redes inalámbricas",
-	  "Método para proteger sistemas"
-	],
-	"answer": "Software que usa vulnerabilidades"
-  },
-  {
-	"question_code": "S025",
-	"question_type": "CS",
-	"question": "¿Qué método de cifrado utiliza el protocolo WPA2 para redes Wi-Fi?",
-	"options": [
-	  "RSA",
-	  "AES",
-	  "DES",
-	  "SHA-256"
-	],
-	"answer": "AES"
+	"answer": "Análisis"
   },
   {
 	"question_code": "D001",

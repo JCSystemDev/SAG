@@ -21,16 +21,16 @@ player_battle = NodePath("PlayerBattle")
 
 [node name="Background" type="Node2D" parent="."]
 
-[node name="Fight Arena" type="Sprite2D" parent="Background"]
-position = Vector2(480, 200)
-scale = Vector2(7, 7)
-texture = ExtResource("2_ijyh5")
-
-[node name="Sprite2D" type="Sprite2D" parent="Background"]
+[node name="BG Questions" type="Sprite2D" parent="Background"]
 modulate = Color(0.0784314, 0.105882, 0.105882, 0.588235)
 position = Vector2(480, 240)
 scale = Vector2(6, 6.62778)
 texture = ExtResource("2_smbbs")
+
+[node name="Fight Arena" type="Sprite2D" parent="Background"]
+position = Vector2(480, 200)
+scale = Vector2(7, 7)
+texture = ExtResource("2_ijyh5")
 
 [node name="Player" parent="." instance=ExtResource("8_vunv7")]
 position = Vector2(125, 181)

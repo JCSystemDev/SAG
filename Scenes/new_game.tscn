@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://p754mgaf6eiq"]
+[gd_scene load_steps=10 format=3 uid="uid://p754mgaf6eiq"]
 
 [ext_resource type="Script" path="res://Scripts/new_game.gd" id="1_muhlq"]
 [ext_resource type="Texture2D" uid="uid://dykpbio4a57f2" path="res://Assets/Sprites/Backgrounds/Background 5.png" id="2_u7t5e"]
@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://deva1v0f38e5f" path="res://Assets/Sprites/Portraits/Wizard.png" id="4_qdwlj"]
 [ext_resource type="Texture2D" uid="uid://b84uth18bitmj" path="res://Assets/Sprites/Portraits/Viking.png" id="5_7jc60"]
 [ext_resource type="Texture2D" uid="uid://80oojqiljvjk" path="res://Assets/Sprites/Portraits/Goblin.png" id="6_6vp2t"]
-[ext_resource type="FontFile" uid="uid://dsni156ru77g5" path="res://Assets/Fonts/VP Pixel W05 Medium.otf" id="8_kba1j"]
+[ext_resource type="FontFile" uid="uid://dsni156ru77g5" path="res://Assets/Fonts/Textos.otf" id="8_kba1j"]
 [ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8-bit-hud.ttf" id="8_kql76"]
+[ext_resource type="FontFile" uid="uid://g3ewt3rhuayq" path="res://Assets/Fonts/Gameplay.ttf" id="8_lpw50"]
 
 [node name="NewGame" type="CanvasLayer"]
 layer = 0
@@ -66,7 +67,7 @@ offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_kql76")
-text = "TIPO-A"
+text = "Knight"
 
 [node name="B-Type" type="Button" parent="Choose Character"]
 layout_mode = 1
@@ -82,7 +83,7 @@ offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_kql76")
-text = "TIPO-B"
+text = "Wizard"
 
 [node name="C-Type" type="Button" parent="Choose Character"]
 layout_mode = 1
@@ -98,7 +99,7 @@ offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_kql76")
-text = "TIPO-C"
+text = "Viking"
 
 [node name="D-Type" type="Button" parent="Choose Character"]
 layout_mode = 1
@@ -114,7 +115,7 @@ offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_kql76")
-text = "TIPO-D"
+text = "Goblin"
 
 [node name="Accept" type="Button" parent="Choose Character"]
 layout_mode = 1
@@ -123,14 +124,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = 185.0
-offset_right = 150.0
+offset_left = -155.0
+offset_top = 179.0
+offset_right = 162.0
 offset_bottom = 241.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("8_kql76")
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = ExtResource("8_lpw50")
+theme_override_font_sizes/font_size = 30
 text = "ACEPTAR"
 
 [node name="LineEdit" type="LineEdit" parent="Choose Character"]
@@ -140,14 +141,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -176.0
-offset_top = -207.0
-offset_right = 176.0
-offset_bottom = -141.0
+offset_left = -219.0
+offset_top = -209.0
+offset_right = 226.0
+offset_bottom = -142.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_kba1j")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 56
 placeholder_text = "TU NOMBRE"
 alignment = 1
 max_length = 12
@@ -161,9 +162,20 @@ offset_left = 331.0
 offset_top = 396.0
 offset_right = 630.0
 offset_bottom = 436.0
-theme_override_fonts/font = ExtResource("8_kql76")
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = ExtResource("8_lpw50")
+theme_override_font_sizes/font_size = 30
 text = "TUTORIAL"
+alignment = 1
+icon_alignment = 1
+
+[node name="Back" type="Button" parent="."]
+offset_left = 773.0
+offset_top = 460.0
+offset_right = 899.0
+offset_bottom = 497.0
+theme_override_fonts/font = ExtResource("8_lpw50")
+theme_override_font_sizes/font_size = 20
+text = "VOLVER"
 
 [connection signal="pressed" from="Choose Character/A-Type" to="." method="_on_a_type_pressed"]
 [connection signal="pressed" from="Choose Character/B-Type" to="." method="_on_b_type_pressed"]
@@ -171,3 +183,4 @@ text = "TUTORIAL"
 [connection signal="pressed" from="Choose Character/D-Type" to="." method="_on_d_type_pressed"]
 [connection signal="pressed" from="Choose Character/Accept" to="." method="_on_accept_pressed"]
 [connection signal="toggled" from="Choose Character/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

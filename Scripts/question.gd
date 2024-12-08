@@ -25,7 +25,7 @@ func _ready():
 	time_label.hide()
 	_hide_question()
 	get_tree().paused = false
-	AudioManager.play_music("Technocracy.mp3")
+	AudioManager.play_music("ReClaimed.mp3")
 	timer.timeout.connect(_on_timer_tick)
 	await get_tree().create_timer(3).timeout
 	questions_label.show()
@@ -52,15 +52,18 @@ func _on_timer_tick():
 		await get_tree().create_timer(1).timeout
 		timeover.hide()
 		game_zone.player.current_hp -= 1
+		DataManager.player_stats[0]["incorrect_questions"] += 1
 		TweenManager._shake_tween(game_zone.player)
 		game_zone.player.player_anim.play("player_damage")
 		AudioManager.play_sound("Attack Phase.wav")
 		await get_tree().create_timer(1).timeout
 		if game_zone.player.current_hp <= 0:
+			DataManager.player_stats[0]["lose_battles"] += 1
 			game_zone.player.player_anim.play("player_death")
 			game_zone.player_battle.hide()
 			_lose_time_over()
 		elif question_count <= 0:
+			DataManager.player_stats[0]["lose_battles"] += 1
 			game_zone.notifications.lose_label.text = "Se acabaron las preguntas"
 			_lose_time_over()
 		else:
@@ -113,6 +116,7 @@ func _check_answer():
 		await get_tree().create_timer(1).timeout
 		correct.hide()
 		game_zone.npc.current_hp -= 1
+		DataManager.player_stats[0]["correct_questions"] += 1
 		
 		#PLAYER ATTACK ENEMY SEQUENCE
 		AudioManager.play_sound("Discard.wav")
@@ -145,6 +149,7 @@ func _check_answer():
 		await get_tree().create_timer(1).timeout
 		incorrect.hide()
 		game_zone.player.current_hp -= 1
+		DataManager.player_stats[0]["incorrect_questions"] += 1
 		
 		#ENEMY ATTACK PLAYER SEQUENCE
 		AudioManager.play_sound("Discard.wav")
@@ -171,6 +176,7 @@ func _check_answer():
 		
 	await get_tree().create_timer(1).timeout
 	if question_count < 0:
+		DataManager.player_stats[0]["lose_battles"] += 1
 		timer.stop()
 		time_label.hide()
 		game_zone.question.hide()
@@ -181,6 +187,7 @@ func _check_answer():
 		TweenManager._appear_tween(game_zone.notifications)
 		DataManager._clear_question_list()
 	elif game_zone.player.current_hp <= 0:
+		DataManager.player_stats[0]["lose_battles"] += 1
 		game_zone.player_battle.hide()
 		game_zone.player.player_anim.play("player_death")
 		timer.stop()
@@ -192,6 +199,7 @@ func _check_answer():
 		TweenManager._appear_tween(game_zone.notifications)
 		DataManager._clear_question_list()
 	elif game_zone.npc.current_hp <= 0 and question_count >= 0:
+		DataManager.player_stats[0]["win_battles"] += 1
 		_get_certificate()
 		game_zone.npc_battle.hide()
 		game_zone.npc.npc_animation.play("death_enemy")
@@ -227,16 +235,16 @@ func _get_certificate():
 	var certificate_type: String
 	var certificate_texture: Texture2D
 	if DataManager.current_type == "HW":
-		certificate_type = "Monitor.png"
+		certificate_type = "Keyboard.png"
 		DataManager.player_stats[0]["hardware_certificate"] = true
 	elif DataManager.current_type == "Code":
-		certificate_type = "Keyboard.png"
+		certificate_type = "Document.png"
 		DataManager.player_stats[0]["programming_certificate"] = true
 	elif DataManager.current_type == "CS":
 		certificate_type = "Locked.png"
 		DataManager.player_stats[0]["cybersecurity_certificate"] = true
 	elif DataManager.current_type == "DB":
-		certificate_type = "FloppyDisk.png"
+		certificate_type = "Option.png"
 		DataManager.player_stats[0]["database_certificate"] = true
 	certificate_texture = load("res://Assets/Sprites/Icons/"+certificate_type)
 	game_zone.notifications.certificate_sprite.set_texture(certificate_texture)

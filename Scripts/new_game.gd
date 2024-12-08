@@ -1,6 +1,4 @@
 extends CanvasLayer
-@onready var world_scene: PackedScene = load("res://Scenes/world.tscn")
-@onready var tutorial_scene: PackedScene = load("res://Scenes/tutorial.tscn")
 @onready var accept_button: Button = $"Choose Character/Accept"
 @onready var player_name: LineEdit = $"Choose Character/LineEdit"
 @onready var a_type: Button = $"Choose Character/A-Type"
@@ -10,6 +8,7 @@ extends CanvasLayer
 @onready var tutorial: bool = false
 
 func _ready():
+	AudioManager.play_music("Dreamy.mp3")
 	player_name.set_text("")
 	accept_button.set_disabled(true)
 	a_type.set_disabled(true)
@@ -36,35 +35,37 @@ func _process(delta):
 func _on_accept_pressed():
 	if !tutorial:
 		DataManager.player_stats[0]["player_name"] = player_name.text
+		DataManager._get_player_texture()
 		DataManager._new_game()
 		AudioManager.play_sound("Equip.wav")
-		Transition.load_scene(world_scene, "transition")
+		Transition.load_scene(DataManager.world_scene, "transition")
 		accept_button.set_disabled(true)
 	else:
 		DataManager.player_stats[0]["player_name"] = player_name.text
+		DataManager._get_player_texture()
 		DataManager._new_game()
 		AudioManager.play_sound("Equip.wav")
-		Transition.load_scene(tutorial_scene, "transition")
+		Transition.load_scene(DataManager.tutorial_scene, "transition")
 		accept_button.set_disabled(true)
 
 func _on_a_type_pressed():
 	AudioManager.play_sound("Accept.wav")
 	DataManager.player_stats[0]["player_class"] = "Knight"
-	DataManager._get_player_texture("res://Assets/Sprites/Player/Knight.png", "res://Assets/Sprites/Portraits/Knight.png")
+	DataManager._set_player_texture("res://Assets/Sprites/Player/Knight.png", "res://Assets/Sprites/Portraits/Knight.png")
 	if player_name.text != "":
 		accept_button.set_disabled(false)
 
 func _on_b_type_pressed():
 	AudioManager.play_sound("Accept.wav")
 	DataManager.player_stats[0]["player_class"] = "Wizard"
-	DataManager._get_player_texture("res://Assets/Sprites/Player/Wizard.png", "res://Assets/Sprites/Portraits/Wizard.png")
+	DataManager._set_player_texture("res://Assets/Sprites/Player/Wizard.png", "res://Assets/Sprites/Portraits/Wizard.png")
 	if player_name.text != "":
 		accept_button.set_disabled(false)
 
 func _on_c_type_pressed():
 	AudioManager.play_sound("Accept.wav")
 	DataManager.player_stats[0]["player_class"] = "Viking"
-	DataManager._get_player_texture("res://Assets/Sprites/Player/Viking.png", "res://Assets/Sprites/Portraits/Viking.png")
+	DataManager._set_player_texture("res://Assets/Sprites/Player/Viking.png", "res://Assets/Sprites/Portraits/Viking.png")
 	if player_name.text != "":
 		accept_button.set_disabled(false)
 
@@ -72,7 +73,7 @@ func _on_c_type_pressed():
 func _on_d_type_pressed():
 	AudioManager.play_sound("Accept.wav")
 	DataManager.player_stats[0]["player_class"] = "Goblin"
-	DataManager._get_player_texture("res://Assets/Sprites/Player/Goblin.png", "res://Assets/Sprites/Portraits/Goblin.png")
+	DataManager._set_player_texture("res://Assets/Sprites/Player/Goblin.png", "res://Assets/Sprites/Portraits/Goblin.png")
 	if player_name.text != "":
 		accept_button.set_disabled(false)
 
@@ -84,3 +85,8 @@ func _on_check_button_toggled(toggled_on):
 	else:
 		AudioManager.play_sound("Click.wav")
 		tutorial = false
+
+
+func _on_back_pressed():
+	AudioManager.play_sound("Discard.wav")
+	Transition.load_scene(DataManager.menu_scene, "transition")
