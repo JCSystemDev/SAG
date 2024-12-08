@@ -2,7 +2,6 @@ extends CanvasLayer
 class_name Interaction
 
 @onready var player = get_tree().get_first_node_in_group("player")
-@onready var interaction_label = $Label
 var active_areas: Array = []
 var can_interact: bool = true
 
@@ -13,17 +12,6 @@ func unregister_area(area: InteractionArea):
 	var index = active_areas.find(area)
 	if index != -1:
 		active_areas.remove_at(index)
-		
-func _process(_delta):
-	if active_areas.size() > 0 and can_interact and !DialogueManager.dialogue_box.visible:
-		active_areas.sort_custom(_sort_by_distance_to_player)
-		interaction_label.text = active_areas[0].action_name
-		interaction_label.global_position = active_areas[0].global_position
-		interaction_label.global_position.y -= 80
-		interaction_label.global_position.x -= interaction_label.size.x / 2
-		interaction_label.show()
-	else:
-		interaction_label.hide()
 
 func _sort_by_distance_to_player(area1, area2):
 	var area1_to_player = player.global_position.distance_to(area1.global_position)
@@ -34,6 +22,5 @@ func _input(event):
 	if event.is_action_pressed("ui_accept") && can_interact && !DialogueManager.dialogue_box.visible:
 		if active_areas.size() > 0:
 			can_interact = false
-			interaction_label.hide()
 			await active_areas[0].interact.call()
 			can_interact = true

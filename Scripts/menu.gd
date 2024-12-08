@@ -12,9 +12,15 @@ func _ready():
 	Transition.animation_player.play_backwards("transition")
 	logo.hide()
 	title.hide()
+	new_game.hide()
+	load_game.hide()
+	quit_game.hide()
 	await get_tree().create_timer(1).timeout
 	logo.show()
 	title.show()
+	new_game.show()
+	load_game.show()
+	quit_game.show()
 	TweenManager._appear_tween(title)
 	if !DataManager._save_file_exist():
 		load_game.set_disabled(true)
@@ -28,16 +34,22 @@ func _process(delta):
 func _on_quit_game_pressed():
 	AudioManager.play_sound("Discard.wav")
 	Transition.quit_transition("transition")
-	quit_game.set_disabled(true)
+	new_game.hide()
+	load_game.hide()
+	quit_game.hide()
 	
 func _on_new_game_pressed():
 	DataManager._new_game()
 	AudioManager.play_sound("Equip.wav")
 	Transition.load_scene(DataManager.new_game_scene, "transition")
-	new_game.set_disabled(true)
+	new_game.hide()
+	load_game.hide()
+	quit_game.hide()
 
 func _on_continue_game_pressed():
 	DataManager._load_game()
 	AudioManager.play_sound("Equip.wav")
 	Transition.load_scene(DataManager.world_scene, "transition")
-	load_game.set_disabled(true)
+	new_game.hide()
+	load_game.hide()
+	quit_game.hide()

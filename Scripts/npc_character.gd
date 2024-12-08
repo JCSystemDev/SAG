@@ -18,14 +18,14 @@ func _ready():
 	animated_sprite.play(animation_name)
 
 func _on_interact():
+	DataManager._check_all_certificates()
 	for npc in DataManager.npcs:
 		if npc_name == npc["npc_name"]: 
 			DataManager.npc_question = npc["question"]
 			DataManager.npc_negative = npc["negative"]
-			DataManager.npc_lose = npc["lose_game"]
-			DataManager.npc_win = npc["win_game"]
 			DataManager.npc_name = npc["npc_realname"]
-			DataManager.npc_texture = load(npc["npc_sprite"])	
+			DataManager.npc_texture = load(npc["npc_sprite"])
+	DialogueManager._show_buttons()
 	DialogueManager._load_dialogue_box(DataManager.npc_question, DataManager.npc_texture, DataManager.npc_name)
 	DialogueManager._play_dialogue_box()
-	DialogueManager._show_buttons()
+	

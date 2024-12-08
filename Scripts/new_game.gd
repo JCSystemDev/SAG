@@ -8,7 +8,7 @@ extends CanvasLayer
 @onready var tutorial: bool = false
 
 func _ready():
-	AudioManager.play_music("Dreamy.mp3")
+	AudioManager.play_music("Electromagnetic Waves.mp3")
 	player_name.set_text("")
 	accept_button.set_disabled(true)
 	a_type.set_disabled(true)

@@ -10,6 +10,7 @@ var world_scene: PackedScene = load("res://Scenes/world.tscn")
 var menu_scene: PackedScene = load("res://Scenes/menu.tscn")
 var tutorial_scene: PackedScene = load("res://Scenes/tutorial.tscn")
 var new_game_scene: PackedScene = load("res://Scenes/new_game.tscn")
+var gameover_scene: PackedScene = load("res://Scenes/gameover.tscn")
 
 # Menu Variables
 var in_game: bool = false
@@ -22,6 +23,7 @@ var current_answer
 var current_options
 
 # Player Variables
+var all_certificates: bool
 var in_battle: bool
 var move_speed: float
 var player_sprite: Texture2D
@@ -42,10 +44,10 @@ var player_stats_default = [{
 	"lose_battles":0,
 	"correct_questions":0,
 	"incorrect_questions":0,
-	"programming_certificate":false,
-	"hardware_certificate":false,
-	"database_certificate":false,
-	"cybersecurity_certificate":false
+	"p_cert":false,
+	"h_cert":false,
+	"d_cert":false,
+	"c_cert":false
 	}]
 
 # NPC Variables
@@ -71,10 +73,21 @@ func _get_question_list(type_question: String):
 	for question in questions:
 		if question["question_type"] == type_question:
 			question_list.append(question["question_code"])
-			
-func _clear_question_list():
-	question_list = []			
+	question_list.shuffle()
 
+func _get_question_final_list():
+	_get_question_list("HW")
+	question_list.shuffle()
+	_get_question_list("CS")
+	question_list.shuffle()
+	_get_question_list("DB")
+	question_list.shuffle()
+	_get_question_list("Code")
+	question_list.shuffle()
+	
+func _clear_question_list():
+	question_list = []
+	
 func _set_player_texture(player_texture: String, portrait_texture: String):
 	player_stats[0]["player_sprite"] = player_texture
 	player_stats[0]["player_portrait"] = portrait_texture
@@ -82,6 +95,14 @@ func _set_player_texture(player_texture: String, portrait_texture: String):
 func _get_player_texture():
 	player_sprite = load(player_stats[0]["player_sprite"])
 	player_portrait = load(player_stats[0]["player_portrait"])
+	
+func _check_all_certificates():
+	if player_stats[0]["c_cert"] and player_stats[0]["h_cert"] and player_stats[0]["p_cert"] and player_stats[0]["d_cert"]:
+		all_certificates = true
+	else:
+		all_certificates = false		
+
+# Data Functions
 
 func _new_game():
 	player_stats = player_stats_default

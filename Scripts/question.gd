@@ -17,15 +17,22 @@ extends Node2D
 
 var countdown_time: int = 15
 var current_answer
-var question_count: int = 8
+var question_count: int
 
 func _ready():
+	if DataManager.npc_name == "Guardian TI":
+		question_count = 15
+	else:
+		question_count = 8
 	DataManager.question_list.shuffle()
 	questions_label.hide()
 	time_label.hide()
 	_hide_question()
 	get_tree().paused = false
-	AudioManager.play_music("ReClaimed.mp3")
+	if DataManager.npc_name == "Guardian TI":
+		AudioManager.play_music("Land with No Dragons.mp3")
+	else:
+		AudioManager.play_music("ReClaimed.mp3")
 	timer.timeout.connect(_on_timer_tick)
 	await get_tree().create_timer(3).timeout
 	questions_label.show()
@@ -57,12 +64,12 @@ func _on_timer_tick():
 		game_zone.player.player_anim.play("player_damage")
 		AudioManager.play_sound("Attack Phase.wav")
 		await get_tree().create_timer(1).timeout
-		if game_zone.player.current_hp <= 0:
+		if game_zone.player.current_hp <= 0 and question_count >= 0:
 			DataManager.player_stats[0]["lose_battles"] += 1
 			game_zone.player.player_anim.play("player_death")
 			game_zone.player_battle.hide()
 			_lose_time_over()
-		elif question_count <= 0:
+		elif question_count < 0 and game_zone.npc.current_hp > 0:
 			DataManager.player_stats[0]["lose_battles"] += 1
 			game_zone.notifications.lose_label.text = "Se acabaron las preguntas"
 			_lose_time_over()
@@ -86,6 +93,7 @@ func _on_button_d_pressed():
 	_check_answer()
 
 func _call_question():
+	update_questions_label()
 	countdown_time = 15
 	time_label.show()
 	question_label.show()
@@ -175,7 +183,7 @@ func _check_answer():
 		AudioManager.play_sound("Defense Phase.wav")
 		
 	await get_tree().create_timer(1).timeout
-	if question_count < 0:
+	if question_count <= 0 and game_zone.npc.current_hp > 0:
 		DataManager.player_stats[0]["lose_battles"] += 1
 		timer.stop()
 		time_label.hide()
@@ -186,7 +194,7 @@ func _check_answer():
 		game_zone.notifications.lose_buttons.show()
 		TweenManager._appear_tween(game_zone.notifications)
 		DataManager._clear_question_list()
-	elif game_zone.player.current_hp <= 0:
+	elif game_zone.player.current_hp <= 0 and question_count >= 0:
 		DataManager.player_stats[0]["lose_battles"] += 1
 		game_zone.player_battle.hide()
 		game_zone.player.player_anim.play("player_death")
@@ -200,7 +208,11 @@ func _check_answer():
 		DataManager._clear_question_list()
 	elif game_zone.npc.current_hp <= 0 and question_count >= 0:
 		DataManager.player_stats[0]["win_battles"] += 1
-		_get_certificate()
+		if DataManager.npc_name == "Guardian TI":
+			game_zone.notifications.win_label.text = "DERROTASTE AL GUARDIAN TI"
+			game_zone.notifications.certificate_sprite.hide()
+		else:
+			_get_certificate()
 		game_zone.npc_battle.hide()
 		game_zone.npc.npc_animation.play("death_enemy")
 		timer.stop()
@@ -236,15 +248,15 @@ func _get_certificate():
 	var certificate_texture: Texture2D
 	if DataManager.current_type == "HW":
 		certificate_type = "Keyboard.png"
-		DataManager.player_stats[0]["hardware_certificate"] = true
+		DataManager.player_stats[0]["h_cert"] = true
 	elif DataManager.current_type == "Code":
 		certificate_type = "Document.png"
-		DataManager.player_stats[0]["programming_certificate"] = true
+		DataManager.player_stats[0]["p_cert"] = true
 	elif DataManager.current_type == "CS":
 		certificate_type = "Locked.png"
-		DataManager.player_stats[0]["cybersecurity_certificate"] = true
+		DataManager.player_stats[0]["c_cert"] = true
 	elif DataManager.current_type == "DB":
 		certificate_type = "Option.png"
-		DataManager.player_stats[0]["database_certificate"] = true
+		DataManager.player_stats[0]["d_cert"] = true
 	certificate_texture = load("res://Assets/Sprites/Icons/"+certificate_type)
 	game_zone.notifications.certificate_sprite.set_texture(certificate_texture)

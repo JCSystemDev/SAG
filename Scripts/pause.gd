@@ -52,22 +52,22 @@ func _get_stats():
 	incorrects.set_text(str(DataManager.player_stats[0]["incorrect_questions"]))
 
 func _get_certificates():
-	if DataManager.player_stats[0]["hardware_certificate"]:
+	if DataManager.player_stats[0]["h_cert"]:
 		hardware_certificate.show()
 	else:
 		hardware_certificate.hide()
 	
-	if DataManager.player_stats[0]["database_certificate"]:
+	if DataManager.player_stats[0]["d_cert"]:
 		database_certificate.show()
 	else:
 		database_certificate.hide()
 		
-	if DataManager.player_stats[0]["programming_certificate"]:
+	if DataManager.player_stats[0]["p_cert"]:
 		programming_certificate.show()
 	else:
 		programming_certificate.hide()
 		
-	if DataManager.player_stats[0]["cybersecurity_certificate"]:
+	if DataManager.player_stats[0]["c_cert"]:
 		cybersecurity_certificate.show()
 	else:
 		cybersecurity_certificate.hide()

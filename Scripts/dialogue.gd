@@ -20,11 +20,13 @@ func _load_dialogue_box(_line: String, _texture: Texture2D, _name: String):
 	avatar_dialogue.set_text(_line)
 	
 func _input(event):
-	if event.is_action_pressed("ui_accept") and !in_dialogue:
+	if event.is_action_pressed("ui_accept") and !in_dialogue and dialogue_box.visible:
 		if !yes_button.visible and !no_button.visible:
 			_close_dialogue()
 
 func _play_dialogue_box():
+	if DataManager.npc_name == "Guardian TI" and !DataManager.all_certificates:
+		_hide_buttons()
 	in_dialogue = true
 	AudioManager.play_sound("Click.wav")
 	dialogue_animation.play("write_text")

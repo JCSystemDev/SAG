@@ -5,9 +5,7 @@
 		"npc_sprite": "res://Assets/Sprites/Portraits/BeardCode.png",
 		"question": "Cof, cof. ¿Deseas enfrentar un reto sobre programación?.",
 		"negative": "Cof, cof. Pues tú te lo pierdes aprendiz.",
-		"lose_game":"Cof, cof. Necesitas practicar más programación.",
-		"win_game":"Cof, cof. Debo mejorar mis conocimientos de programación.",
-		"npc_exp": 5,
+		"npc_hp": 5,
 		"npc_type": "Code"
 	},
 	{
@@ -16,9 +14,7 @@
 		"npc_sprite": "res://Assets/Sprites/Portraits/NerdHardware.png",
 		"question": "Jeje. ¿Quieres demostrar tus conocimientos sobre hardware?.",
 		"negative": "Jeje. Parece que no eres muy hábil en hardware.",
-		"lose_game":"Jeje. Necesitas mejorar tus conocimientos sobre hardware.",
-		"win_game":"Jeje. He perdido. Debo estudiar más sobre hardware.",
-		"npc_exp": 5,
+		"npc_hp": 5,
 		"npc_type": "HW"
 	},
 	{
@@ -27,9 +23,7 @@
 		"npc_sprite": "res://Assets/Sprites/Portraits/PunkHack.png",
 		"question": "¿Vas a pelear contra este amo del hacking?.",
 		"negative": "Ya veo. Parece que mis habilidades te intimidaron.",
-		"lose_game":"Oh. Tus habilidades de hacking son débiles.",
-		"win_game":"Impresionante. Derrotaste a este amo del hacking.",
-		"npc_exp": 5,
+		"npc_hp": 5,
 		"npc_type": "CS"
 	},
 	{
@@ -38,20 +32,16 @@
 		"npc_sprite": "res://Assets/Sprites/Portraits/ManagerDB.png",
 		"question": "Oye, novato. ¿Aceptas un duelo de bases de datos?",
 		"negative": "Bueno, no todos podemos ser expertos en bases de datos.",
-		"lose_game":"Algun día podrias ser la mitad de lo que bueno que soy",
-		"win_game":"Creo que debería ser más humilde con mis conocimientos...",
-		"npc_exp": 5,
+		"npc_hp": 5,
 		"npc_type": "DB"
 	},
 	{
 		"npc_name": "GuardianTI",
 		"npc_realname": "Guardian TI",
 		"npc_sprite": "res://Assets/Sprites/Portraits/GuardianTI.png",
-		"question": "¿Quieres asumir el máximo reto de este nivel?.",
-		"negative": "Deberías venir cuando realmente estes listo.",
-		"lose_game":"",
-		"win_game":"",
-		"npc_exp": 5,
-		"npc_type": "All"
+		"question": "Solo podrás enfrentarme cuando tengas todas las certificaciones.",
+		"negative": "Ven cuando realmente estes listo para este desafío.",
+		"npc_hp": 10,
+		"npc_type": "ALL"
 	}
 ]

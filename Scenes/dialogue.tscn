@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0dtv13ju1vy7"]
+[gd_scene load_steps=10 format=3 uid="uid://b0dtv13ju1vy7"]
 
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_ofgcj"]
 [ext_resource type="Texture2D" uid="uid://bpta8vn2ypwib" path="res://Assets/Sprites/UI/Ui/Dialog/DialogBoxFaceset.png" id="2_cw0m0"]
 [ext_resource type="Texture2D" uid="uid://guux0hvi0ui" path="res://Assets/Sprites/Portraits/PunkHack.png" id="3_gc3wj"]
 [ext_resource type="FontFile" uid="uid://dsni156ru77g5" path="res://Assets/Fonts/Textos.otf" id="5_yaj14"]
+[ext_resource type="FontFile" uid="uid://g3ewt3rhuayq" path="res://Assets/Fonts/Gameplay.ttf" id="6_a25m5"]
 [ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8-bit-hud.ttf" id="7_xk3jm"]
 
 [sub_resource type="Animation" id="Animation_i4en7"]
@@ -102,13 +103,13 @@ libraries = {
 
 [node name="Yes Button" type="Button" parent="."]
 visible = false
-offset_left = 486.0
-offset_top = 492.0
+offset_left = 500.0
+offset_top = 497.0
 offset_right = 536.0
-offset_bottom = 524.0
+offset_bottom = 523.0
 size_flags_stretch_ratio = 0.0
 focus_neighbor_right = NodePath("../No Button")
-theme_override_fonts/font = ExtResource("7_xk3jm")
+theme_override_fonts/font = ExtResource("6_a25m5")
 theme_override_font_sizes/font_size = 15
 action_mode = 0
 text = "SI"
@@ -116,11 +117,11 @@ text = "SI"
 [node name="No Button" type="Button" parent="."]
 visible = false
 offset_left = 539.0
-offset_top = 492.0
-offset_right = 589.0
-offset_bottom = 524.0
+offset_top = 497.0
+offset_right = 575.0
+offset_bottom = 523.0
 focus_neighbor_left = NodePath("../Yes Button")
-theme_override_fonts/font = ExtResource("7_xk3jm")
+theme_override_fonts/font = ExtResource("6_a25m5")
 theme_override_font_sizes/font_size = 15
 action_mode = 0
 text = "NO"

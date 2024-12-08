@@ -1,5 +1,4 @@
 class_name Notifications extends Node2D
-@onready var world: PackedScene = load("res://Scenes/world.tscn")
 @onready var endgame_label: Label = $"Endgame Notification/Label"
 @onready var win_buttons = $"Endgame Notification/Win Buttons"
 @onready var lose_buttons = $"Endgame Notification/Lose Buttons"
@@ -10,7 +9,7 @@ class_name Notifications extends Node2D
 
 func _on_exit_button_pressed():
 	AudioManager.play_sound("Click.wav")
-	Transition.load_scene(world, "transition")
+	Transition.load_scene(DataManager.world_scene, "transition")
 
 func _on_retry_button_pressed():
 	AudioManager.play_sound("Equip.wav")
@@ -18,4 +17,8 @@ func _on_retry_button_pressed():
 
 func _on_end_button_pressed():
 	AudioManager.play_sound("Click.wav")
-	Transition.load_scene(world, "transition")	
+	if DataManager.npc_name == "Guardian TI":
+		Transition.load_scene(DataManager.gameover_scene, "transition")	
+	else:
+		Transition.load_scene(DataManager.world_scene, "transition")
+	

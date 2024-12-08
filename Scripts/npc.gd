@@ -13,11 +13,13 @@ var exp_points: int
 func _get_values(_npc_name: String):
 	for npc in DataManager.npcs:
 		if npc["npc_realname"] == _npc_name:
-			npc_hp = 5
+			npc_hp = npc["npc_hp"]
 			current_hp = npc_hp
 			sprite_texture = load(npc["npc_sprite"])
-			exp_points = npc["npc_exp"]
-			DataManager._get_question_list(npc["npc_type"])
+			if _npc_name == "Guardian TI":
+				DataManager._get_question_final_list()
+			else:
+				DataManager._get_question_list(npc["npc_type"])
 
 func _set_values():
 	name_npc_label.set_text(game_zone.npc_name)
